@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://saintconhospital.ctfd.io/admin/teams?page=3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Admin Panel</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://cdn.cloud.ctfd.io/saintconhospital/themes/core/static/img/favicon.ico?t=1586721198" type="image/x-icon">
+	<link rel="icon" href="https://cdn.cloud.ctfd.io/saintconhospital/themes/core/static/img/favicon.ico?t=1586721198" type="image/x-icon">
+	<link rel="stylesheet" href="./Teams3_files/fonts.min.css">
+	<link rel="stylesheet" href="./Teams3_files/main.min.css">
+	<link rel="stylesheet" href="./Teams3_files/admin.min.css">
+	<link rel="stylesheet" href="./Teams3_files/codemirror.min.css">
+	<script type="text/javascript" src="./Teams3_files/vendor.06c7227b.js"></script><script type="text/javascript" src="./Teams3_files/main.851b6206.js"></script><script type="text/javascript" async="" src="./Teams3_files/saved_resource"></script><script type="text/javascript">
+		var init = {
+			'urlRoot': "",
+			'csrfNonce': "ecafdc2ee19af3d99121d34ebe8dc541d1a925592c8864be21bd31ee5e3fa019",
+			'userMode': "teams",
+			'userId': 1,
+			'userName': "detcidda2",
+			'userEmail': "detcidda2@protonmail.com",
+			'teamId': null, 
+			'teamName': null,
+			'start': null,
+			'end': 1666911600
+		}
+	</script>
+	
+
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a href="https://saintconhospital.ctfd.io/" class="navbar-brand">CTFd</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="base-navbars">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/statistics">Statistics</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/notifications">Notifications</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="https://saintconhospital.ctfd.io/admin/teams?page=3#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Pages</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/pages">All Pages</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/pages/new">New Page</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/users">Users</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/teams">Teams</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/scoreboard">Scoreboard</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/challenges">Challenges</a></li>
+					<li class="nav-item dropdown">
+						<a href="https://saintconhospital.ctfd.io/admin/teams?page=3#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Submissions</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions">All Submissions</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/correct">Correct Submissions</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/incorrect">Incorrect Submissions</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config">Config</a></li>
+
+					
+					
+					
+						<li class="nav-item">
+							<a class="nav-link d-none d-md-block d-lg-block">|</a>
+						</li>
+
+						
+							
+								
+							
+							<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/services">Services</a></li>
+						
+
+						
+						<li class="nav-item dropdown">
+							<a href="https://saintconhospital.ctfd.io/admin/teams?page=3#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/plugins/webhooks">Webhooks</a>
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/plugins/sso">Single sign-on</a>
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/pending">Manual Submissions</a>
+									
+							</ul>
+						</li>
+						
+					
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item">
+						<a class="nav-link" href="https://docs.ctfd.io/" target="_blank">
+							<i class="far fa-question-circle"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main role="main">
+		
+		
+<div class="jumbotron">
+	<div class="container">
+		<h1>Teams
+			<span class="create-team" role="button" data-toggle="tooltip" title="" data-original-title="Create Team">
+				<a href="https://saintconhospital.ctfd.io/admin/teams/new" style="color: inherit;">
+					<i class="btn-fa fas fa-plus-circle"></i>
+				</a>
+			</span>
+		</h1>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			
+
+			
+			<form method="GET" class="form-inline">
+				<div class="form-group col-md-2">
+					<select class="form-control custom-select w-100" id="field" name="field" required=""><option value="name">Name</option><option value="id">ID</option><option value="affiliation">Affiliation</option><option value="website">Website</option></select>
+				</div>
+				<div class="form-group col-md-8">
+					<input class="form-control w-100" id="q" name="q" placeholder="Search for matching teams" required="" type="text" value="">
+				</div>
+				<div class="form-group col-md-2">
+					<button type="submit" class="btn btn-primary w-100">
+						<i class="fas fa-search" aria-hidden="true"></i>
+					</button>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="float-right pb-3">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-outline-secondary" data-toggle="tooltip" title="" id="teams-edit-button" data-original-title="Edit Teams">
+						<i class="btn-fa fas fa-pencil-alt"></i>
+					</button>
+					<button type="button" class="btn btn-outline-danger" data-toggle="tooltip" title="" id="teams-delete-button" data-original-title="Delete Teams">
+						<i class="btn-fa fas fa-trash-alt"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<table id="teamsboard" class="table table-striped border">
+				<thead>
+					<tr>
+						<th class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" autocomplete="off" data-checkbox-all="">&nbsp;
+							</div>
+						</th>
+						<th class="sort-col text-center"><b>ID</b> <i class="fas fa-sort"></i></th>
+						<th class="sort-col text-left"><b>Team</b> <i class="fas fa-sort"></i></th>
+						<th class="sort-col text-center"><b>Country</b> <i class="fas fa-sort"></i></th>
+						<th class="sort-col text-center px-0"><b>Hidden</b> <i class="fas fa-sort"></i></th>
+						<th class="sort-col text-center px-0"><b>Banned</b> <i class="fas fa-sort"></i></th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr name="102" data-href="/admin/teams/102">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="102" autocomplete="off" data-team-id="102">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="102">102</td>
+						<td class="team-name" value="Dm">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/102">
+								Dm
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="103" data-href="/admin/teams/103">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="103" autocomplete="off" data-team-id="103">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="103">103</td>
+						<td class="team-name" value="ToO">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/103">
+								ToO
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="104" data-href="/admin/teams/104">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="104" autocomplete="off" data-team-id="104">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="104">104</td>
+						<td class="team-name" value="kingbob">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/104">
+								kingbob
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="105" data-href="/admin/teams/105">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="105" autocomplete="off" data-team-id="105">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="105">105</td>
+						<td class="team-name" value="Myself">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/105">
+								Myself
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="106" data-href="/admin/teams/106">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="106" autocomplete="off" data-team-id="106">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="106">106</td>
+						<td class="team-name" value="Dudes">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/106">
+								Dudes
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="107" data-href="/admin/teams/107">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="107" autocomplete="off" data-team-id="107">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="107">107</td>
+						<td class="team-name" value="Manamongkings">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/107">
+								Manamongkings
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="108" data-href="/admin/teams/108">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="108" autocomplete="off" data-team-id="108">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="108">108</td>
+						<td class="team-name" value="HackThePlanet">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/108">
+								HackThePlanet
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="109" data-href="/admin/teams/109">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="109" autocomplete="off" data-team-id="109">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="109">109</td>
+						<td class="team-name" value="Mpowe">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/109">
+								Mpowe
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="111" data-href="/admin/teams/111">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="111" autocomplete="off" data-team-id="111">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="111">111</td>
+						<td class="team-name" value="Drydenmaker">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/111">
+								Drydenmaker
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="112" data-href="/admin/teams/112">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="112" autocomplete="off" data-team-id="112">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="112">112</td>
+						<td class="team-name" value="Group (1)">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/112">
+								Group (1)
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="113" data-href="/admin/teams/113">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="113" autocomplete="off" data-team-id="113">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="113">113</td>
+						<td class="team-name" value="Virus">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/113">
+								Virus
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="114" data-href="/admin/teams/114">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="114" autocomplete="off" data-team-id="114">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="114">114</td>
+						<td class="team-name" value="DisUn10n">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/114">
+								DisUn10n
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="115" data-href="/admin/teams/115">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="115" autocomplete="off" data-team-id="115">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="115">115</td>
+						<td class="team-name" value="ISO-GRC">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/115">
+								ISO-GRC
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="116" data-href="/admin/teams/116">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="116" autocomplete="off" data-team-id="116">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="116">116</td>
+						<td class="team-name" value="BYUWEB">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/116">
+								BYUWEB
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="117" data-href="/admin/teams/117">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="117" autocomplete="off" data-team-id="117">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="117">117</td>
+						<td class="team-name" value="TTT">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/117">
+								TTT
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+					<tr name="118" data-href="/admin/teams/118">
+						<td class="border-right" data-checkbox="">
+							<div class="form-check text-center">
+								<input type="checkbox" class="form-check-input" value="118" autocomplete="off" data-team-id="118">&nbsp;
+							</div>
+						</td>
+						<td class="team-id text-center" value="118">118</td>
+						<td class="team-name" value="TuxToaster">
+							<a href="https://saintconhospital.ctfd.io/admin/teams/118">
+								TuxToaster
+							</a>
+							
+							
+							<span class="d-block text-muted">
+								<small>
+									
+								</small>
+							</span>
+						</td>
+						<td class="team-country text-center" value="">
+							<span>
+								
+							</span>
+						</td>
+
+						<td class="team-hidden d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+
+						<td class="team-banned d-md-table-cell d-lg-table-cell text-center" value="False">
+							
+						</td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+			<div class="text-center">Page
+				<br>
+				
+				<a href="https://saintconhospital.ctfd.io/admin/teams?page=2">&lt;&lt;&lt;</a>
+				
+				<select class="page-select">
+					
+					<option>1</option>
+					
+					<option>2</option>
+					
+					<option selected="">3</option>
+					
+				</select>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+	</main>
+
+	<footer class="footer pt-2">
+		<div class="container text-center">
+			<a href="https://ctfd.io/" class="text-secondary">
+				<small class="text-muted">
+					Powered by CTFd
+				</small>
+			</a>
+			<span>
+				<small class="text-muted"><br> Version 3.5.0</small>
+			</span>
+		</div>
+	</footer>
+
+	<script defer="" src="./Teams3_files/vendor.bundle.min.js"></script>
+	<script defer="" src="./Teams3_files/core.min.js"></script>
+	<script defer="" src="./Teams3_files/helpers.min.js"></script>
+	<script defer="" src="./Teams3_files/components.min.js"></script>
+
+	
+	<script defer="" src="./Teams3_files/teams.min.js"></script>
+
+
+	
+
+
+	
+		
+			<script defer="" src="./Teams3_files/helpscout.min.js"></script>
+		
+	
+
+
+<div id="beacon-container"><div class="hsds-beacon"><div class="Beacon"><div class="BeaconFabButtonFrame" style="border-radius: 60px; height: 60px; position: fixed; transform: scale(1); width: 60px; z-index: 2149; --pulse-background:#333a40; --pulse-bottom-offset:-95px; --pulse-right-offset:-95px;"><style>.BeaconFabButtonFrame {
+  border: none;
+  bottom: 40px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40px;
+  top: auto;
+  transition: box-shadow 250ms ease, opacity 0.4s ease, scale 1000ms ease-in-out,
+    transform 0.2s ease-in-out
+}
+
+.BeaconFabButtonFrame:active {
+    box-shadow: none;
+  }
+
+.BeaconFabButtonFrame iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color-scheme: normal !important;
+  }
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame {
+    bottom: 10px;
+    right: 20px
+}
+  }
+
+@supports (--css: variables) {
+  .BeaconFabButtonFrame.has-pulse-animation::before {
+    -webkit-animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+            animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    background-color: var(--pulse-background);
+    border-radius: 250px;
+    bottom: var(--pulse-bottom-offset);
+    content: '';
+    height: 250px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    right: var(--pulse-right-offset);
+    width: 250px;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  @-webkit-keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}
+
+.BeaconFabButtonFrame--left {
+  left: 40px;
+  right: initial
+}
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame--left {
+    left: 20px;
+    right: initial
+}
+  }
+</style><iframe id="" data-cy="FrameComponent" aria-label="Toggle Customer Support" src="./Teams3_files/saved_resource.html"></iframe></div></div></div></div></body></html>

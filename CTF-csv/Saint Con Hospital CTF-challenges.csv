@@ -1,0 +1,97 @@
+id,name,description,connection_info,next_id,max_attempts,value,category,type,state,requirements
+1,A Friend,My friend has been acting a little weird lately. He sent me a weird message. Can you figure out what's up? ,,,0,100,Forensics,standard,hidden,
+2,lost flash drive,I found a flash drive in the street... ,,,0,100,Forensics,standard,hidden,
+3,pdfcrypt,Hmm.... this PDF file is encrypted. I can't open it... Can you? ,,,0,100,Forensics,standard,hidden,
+4,Ramp Cat,Alright. We got a picture of ramp cat. But we can't find him. Find out where he lives for us please? ,,,0,100,Forensics,standard,hidden,
+5,unk,What the world is this file??? ,,,0,100,Forensics,standard,hidden,
+6,HIPAA Security Rule,"The text of the HIPAA Security Rule is published in regulation in two parts of 45 CFR, what are the two part numbers? (Flag is in the format of two numbers, separated by a comma, e.g. nnn,nnn)",,,0,10,Annual Training,standard,visible,
+7,Breaches Reported to HHS,How many healthcare breaches were reported to HHS in 2021? ,,,0,30,Wall of Shame,standard,visible,
+8,Largest 2021 PHI Breach,What organization reported the largest healthcare breach to HHS in 2021?,,,0,20,Wall of Shame,standard,visible,
+9,Largest Email PHI Breach,How many individuals were affected by the largest email breach reported to HHS?,,,0,30,Wall of Shame,standard,visible,
+10,Largest PHI Breach... ever,"What organization reported the largest healthcare breach ever, and how many individuals were affected? (Flag is in the format of the organization name and the number, separated by a comma, e.g. name,number)",,,0,40,Wall of Shame,standard,visible,
+11,HITECH Breach Reporting,What section of the HITECH Act requires the Secretary of HHS to post a list of breaches of unsecured protected health information affecting 500 or more individuals?,,,0,10,Wall of Shame,standard,visible,
+12,Individuals Affected YTD,How many individuals were affected by all healthcare breaches (under investigation) reported to HHS during the first 9 months of 2022?,,,0,50,Wall of Shame,standard,visible,
+13,Regulatory Authority,Which U.S. regulatory authority regulates medical device safety?,,,0,10,Medical Devices,standard,visible,
+14,International Regulations,"The FDA regulates the use of medical devices internationally. 
+* () True
+* () False
+> **** NOTE: You have only one attempt to answer this challenge ****",,,1,10,Medical Devices,multiple_choice,visible,
+15,Device Classifications,"What are the three classifications of medical device specified by the FDA? (Flag is in a list format, with a comma separating each classification)",,,0,20,Medical Devices,standard,visible,
+16,Common Problem with Infusion Pumps,"According to a 2022 Palo Alto Networks study, what is the unique identifier of the most common vulnerability found in Infusion Pumps? (Flag is in the format CVE-XXXX-XXXXX)",,,0,25,Medical Devices,standard,visible,
+17,Life Sustaining Devices,A medical device that supports or sustains human life is considered which class of device by the FDA?,,,0,25,Medical Devices,standard,visible,
+18,Safe to Sell?,What does a medical device manufacturer have to submit to the FDA before a device can be used or sold as a safe medical device in the United States?,,,0,25,Medical Devices,standard,visible,
+19,Minimum Necessary,"The HIPAA Privacy Rule defines the ""Minimum Necessary Standard"", which states that individuals accessing patient health information should only be granted the access to view the minimum amount of information necessary to perform their healthcare roles. What is the section within 45 CFR where minimum necessary is defined?",,,0,10,Annual Training,standard,visible,
+20,PHI Defined,"Protected Health Information (PHI) is individually identifiable health information in any form (print, digital, and verbal) that is created or received by a healthcare provider, health insurer, or an entitiy acting on their behalf. In HIPAA, there are 18 identifiers defined that can be used to identify a patient. If any ONE of the 18 individual identifiers are included with health information, then the information is PHI. Only two of these identifiers have the word ""code"" in them. The flag for this challenge is one of those unique identifiers.",,,0,20,Annual Training,standard,visible,
+21,PII or PHI?,"Personally Identifiable Information (PII) is any information maintained by an organization that is linked or linkable to an individual, such as medical educational, financial, and employment information. Is the following statement True or False?
+
+""All PHI is PII, but not all PII is PHI.""
+
+* () True
+* () False
+> **** NOTE: You have only one attempt to answer this challenge ****",,,1,10,Annual Training,multiple_choice,visible,
+22,Mystery File,"The endpoint security tool flagged a file as potentially malicious on an endpoint device in the Saint Con Hospital. The endpoint is connected to a medical device. The malware scanning engine slowed the device down considerably, and has since been disabled. You are tasked with performing some manual forensics to determine the problem.
+
+One of the first steps is to identify the file type, what type of file is this?",,,0,25,Forensics,standard,visible,
+23,Mystery Photo,"One of the SaintCon hospital providers has contacted you about a potential cybersecurity issue with their current infusion pumps. He was contacted by a colleague at another hospital who saw an article about a vulnerability. The colleague only emailed him a photo from the article. He has tried contacting the colleague, but they have not responded yet. He is concerned about waiting for an email response with an active vulnerability, and asks if you can find out any information from the photo itself.
+
+By inspecting the file itself, can you find the name of the hospital where the photo was taken?",,,0,10,Forensics,standard,visible,
+24,Mini Badge Unlocked!,"Congratulations on finishing your HIPAA Security Annual Training! Tell a volunteer in the Healthcare Hacking Community booth the following pass phrase and get a mini-badge:
+
+WE ARE ALL PATIENTS
+
+This flag can also be used to earn points in the Hacker's Challenge!",,,0,0,Annual Training,standard,visible,"{'prerequisites': [19, 20, 6]}"
+25,Cost of Used Medical Devices,How much did Brucifer spend to purchase the used medical device from a local thrift store?,,,0,10,Used Medical Devices,standard,visible,
+26,Class of Used Medical Device,What is the class of the used Merlin@home device?,,,0,15,Used Medical Devices,standard,visible,
+27,Failing Flash Memory,What is the address of just one of the bad blocks in the NAND flash memory of the used Merlin@home device?,,,0,100,Used Medical Devices,standard,visible,
+28,Vulnerability Advisory,What is the  Industrial Control Systems CERT Advisory number published by CISA that is associated with the used Merlin@home device?,,,0,25,Used Medical Devices,standard,visible,
+29,Vulnerability Database Entry,What is the unique number of the NIST Vulnerability Database entry associated with the used Merlin@home device?,,,0,25,Used Medical Devices,standard,visible,
+30,Vulnerability Severity,What is the CVSS Version 2.0 base score (representing the severity of the vulnerability) for the CVE associated with the used Merlin@home device?,,,0,25,Used Medical Devices,standard,visible,
+31,Security Upgrade Assistance,The device manufacturer published a software upgrade to resolve the security vulnerability in the Merlin@home devices. What is the published overseas phone number to call for questions regarding the upgrade?,,,0,25,Used Medical Devices,standard,visible,
+33,Device Recall,The medical device manufacturer also issued a recall associated with the unpatched firmware of the Merlin@home device. The recall has since been terminated. What is the date of the termination (Flag format is mm/dd/yyyy)?,,,0,25,Used Medical Devices,standard,visible,
+34,Device Teardown,What is the component manufacturer and part number for the RF communications link between the Merlin@home medical device and a patient's implanted device?,,,0,25,Used Medical Devices,standard,visible,
+35,Bootloader,"What is the name and version number of the bootloader for the used Merlin@home device (Flag is in the format of ""name version"", as reported by the bootloader in the serial terminal)?",,,0,50,Used Medical Devices,standard,visible,
+36,A Special Prize,A team of hackers won a Hackaday prize for their work on hacking the Merlin@home medical device. What is the name of the company that provided the prize?,,,0,50,Used Medical Devices,standard,visible,
+37,Serial Connection,"The Merlin@home medical device supports a serial connection. Of the four serial connectivity pins on the device, which pin was not necessary to establish the serial connection?",,,0,75,Used Medical Devices,standard,visible,
+38,Hackers Challenge Flag Unlocked!,"Congratulations on finishing the Used Medical Device Category! Use the following flag to gain points in the Hackers Challenge:
+
+MERLIN@STCONHOSPITAL",,,0,0,Used Medical Devices,standard,visible,"{'prerequisites': [25, 26, 27, 28, 29, 30, 31, 33, 34, 35, 36, 37]}"
+39,Device Mode,"Some of the medical devices that are on display in the booth are powered on, what mode are they in?",,,0,10,Booth Medical Devices,standard,visible,
+40,Removed Antenna,The antenna was removed from the Merlin@home device to significantly reduce the chance that it would interact with any attendees implants. What is the serial number on the antenna?,,,0,10,Used Medical Devices,standard,visible,
+41,Intellivues,"There are 3 Philips Intellivue MX devices at the booth, in 3 different sizes. What are the 3 model numbers (the numbers after the ""MX"" on the devices)? (The flag for this challenge is three numbers, in ascending order, separated by commas)",,,0,25,Booth Medical Devices,standard,visible,
+42,Widescreen,The screen of the largest of the Philips Intellivue MX devices at the Healthcare Hacking booth is what size? (The flag is the number of inches),,,0,25,Booth Medical Devices,standard,visible,
+43,Portable Device Radio,"The smallest of the Philips Intellivue MX devices has 2 radios in it, that work at two different frequencies for ""Smart-hopping"". What are those frequencies in GHz? (Flag is two numbers, separated by a comma)",,,0,50,Booth Medical Devices,standard,visible,
+44,Inflations,"The Visi Moble Wrist Transceivers last 12-14 hours, and the Cuff Module will need to be recharged after approximately how many inflations?",,,0,25,Booth Medical Devices,standard,visible,
+45,Vital Signs,"6 Vital Signs are captured by ViSi Mobile System, they include the following:
+1. SpO2 / Pulse Rate
+2. ECG / Heart Rate
+3. Respiration Rate
+4. Non-invasive Blood Pressure (NIBP)
+5. Continuous Non-Invasive Blood Pressure (cNIBP)
+
+What is the 6th vitial sign captured by the Visi Mobile System?",,,0,10,Booth Medical Devices,standard,visible,
+46,MX100 Intellivue Battery,What is the charge capacity of the battery of the MX100 in basic configuration  in hours?,,,0,10,Booth Medical Devices,standard,visible,
+47,Oxygen reading definition,A measurement of how much oxygen your blood is carrying as a percentage of the maximum it could carry is represented by this reading level.,,,0,10,Booth Medical Devices,standard,visible,
+48,Classy Devices,What is the regulatory classification of the Visi Mobile Monitoring System?,,,0,10,Booth Medical Devices,standard,visible,
+49,CVE-2020-16216,"Which medical devices at the Healthcare Hacking booth fall under CVE-2020-16216? (separate devices with commas, only input the model number - XX###)",,,0,25,Booth Medical Devices,standard,visible,
+50,Serial Number,What is the serial number (SN) of the IntelliVue MX100?,,,0,20,Booth Medical Devices,standard,visible,
+51,Common Weakness Enumeration,What is the CWE that falls under CVE-2020-16216?,,,0,10,Booth Medical Devices,standard,visible,
+52,MX40 Input impedance,What is the ECG Input Impedance on the MX40?,,,0,25,Booth Medical Devices,standard,visible,
+53,"Hello, my name is...",What is the name of the mannequin in the Healthcare Hacking Booth?,,,0,10,Booth Medical Devices,standard,visible,
+55,Software Update,What software update version did the Philips' IntelliVue MX40 recieve to mitigate against WLAN vulnerabilities? (Flag format: {X.XX.XX}   ,,,0,15,Booth Medical Devices,standard,visible,
+56,Mispelled,"In CISA's vulnerability for the MX40 Patient Worn Monitor medical device, what word does CISA misspell? (Flag is the misspelled version of the word)",,,0,50,Booth Medical Devices,standard,visible,
+57,Access records,"A covered entity must implement hardware, software, and/or procedural mechanisms to record and examine access and other activity in information systems that contain or use e-PHI. What part of the HIPAA Security Rule covers this statement?
+
+Format: XXX.XXX
+or
+Format:XXX.XXX(x)
+
+",,,0,20,Annual Training,standard,visible,
+58,Compromised Certificate,"In 2020, a 6.3 Medium vulnerability was identified on the Intellivue Patient Monitor MX400. ""The software does not check or incorrectly checks the revocation status of a certificate, which may cause it to use a compromised certificate."" What is the CVE?
+
+Format: CVE-XXXX-XXXXX
+
+",,,0,20,Booth Medical Devices,standard,visible,
+59,Masimo Ports,What are the trademarked ports called on the Masimo medical device at the Healthcare Hacking Booth?,,,0,15,Booth Medical Devices,standard,visible,
+60,Masimo expansion,"These ports on the Masimo Root are also designed for third-party measurement expansion, allowing other companies to expand the platform with their own technologies",,,0,20,Booth Medical Devices,standard,visible,
+61,Mobile EKG,What is the name of the manufacturer of the EKG that Brucifer carries with him?,,,0,50,Wednesday Bonus Questions,standard,visible,
+62,Badge Games,What is the name of the game on Brucifer's special badge?,,,0,50,Wednesday Bonus Questions,standard,visible,

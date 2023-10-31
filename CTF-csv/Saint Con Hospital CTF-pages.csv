@@ -1,0 +1,21 @@
+id,title,route,content,draft,hidden,auth_required,format
+1,None,index,"<div class=""row"">
+    <div class=""col-md-6 offset-md-3"">
+      <br>
+      <br>
+      <h3 class=""text-center"">
+          <p>{{ctf_name}}</p>
+      </h3>
+      <h5>
+          <p>{{ctf_description}}</p>
+      </h5>
+      <br>
+      <br>
+      <h5 class=""text-center"">
+            <p>Brought to you by:</p>
+        <a href=""https://saintcon.org/community-healthcare-hacking/"">
+		<img class=""w-100 mx-auto d-block"" style=""max-width: 300px;padding: 50px;padding-top: 1vh;"" src=""https://saintcon.org/wp-content/uploads/2022/04/WEB-LOGO-BLACK.svg"" />
+        </a>
+      </h5>
+    </div>
+</div>",False,False,False,markdown

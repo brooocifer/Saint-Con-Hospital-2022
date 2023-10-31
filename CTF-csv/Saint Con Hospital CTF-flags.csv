@@ -1,0 +1,150 @@
+id,challenge_id,type,content,data
+1,1,static,flag{help_im_stuck_at_the_pet_store},
+2,2,static,flag{its_adventure_time_yee_boi!!!},
+3,3,static,flag{kramer_the_best_hacker_ever},
+4,4,regex,(.*)Koneko(.*),
+5,5,static,flag{old_macdonald_or_mcdonalds_supplier?},
+6,6,static,"160,164",case_insensitive
+7,6,static,"164,160",case_insensitive
+8,7,static,358,case_insensitive
+9,8,static,Florida Healthy Kids Corporation,case_insensitive
+12,10,static,"Anthem Inc.,78800000",
+13,10,static,"Anthem,78800000",case_insensitive
+14,10,static,"Anthem Inc.,78,800,000",case_insensitive
+15,10,static,"Anthem,78,800,000",case_insensitive
+16,11,static,13402(e)(4),case_insensitive
+19,13,static,FDA,case_insensitive
+20,14,static,False,case_insensitive
+21,15,static,"1,2,3",case_insensitive
+22,15,static,"I,II,III",case_insensitive
+23,15,static,"Class 1,Class 2,Class 3",case_insensitive
+24,15,static,"1, 2, 3",case_insensitive
+25,15,static,"I, II, III",case_insensitive
+26,15,static,"Class 1, Class 2, Class 3",case_insensitive
+27,16,static,CVE-2019-12255,case_insensitive
+28,17,static,3,case_insensitive
+29,17,static,Class 3,case_insensitive
+30,17,static,III,case_insensitive
+31,18,static,510k,case_insensitive
+32,18,static,510(k),case_insensitive
+33,18,static,510 K,case_insensitive
+34,19,static,164.502(b),case_insensitive
+35,19,static,164.502b,case_insensitive
+36,19,static,164.502 B,case_insensitive
+37,19,static,164.514(d),case_insensitive
+38,19,static,164.514d,case_insensitive
+39,19,static,164.514 D,case_insensitive
+40,17,static,Three,case_insensitive
+41,15,static,"One,Two,Three",case_insensitive
+42,15,static,"One, Two, Three",case_insensitive
+43,20,static,Zip,case_insensitive
+44,20,static,Zip Code,case_insensitive
+45,20,static,ZipCode,case_insensitive
+46,20,static,Geo,case_insensitive
+47,20,static,Geo Code,case_insensitive
+48,20,static,GeoCode,case_insensitive
+49,21,static,TRUE,case_insensitive
+50,22,static,DICOM,case_insensitive
+51,23,static,Naval Hospital - Naples,
+52,23,static,Naval Hospital Naples,case_insensitive
+53,23,static,Naples Naval Hospital,case_insensitive
+54,24,static,WE ARE ALL PATIENTS,case_insensitive
+55,25,static,$6.00,case_insensitive
+56,25,static,$6,case_insensitive
+57,25,static,Six Dollars,case_insensitive
+58,25,static,$ 6,case_insensitive
+59,25,static,$ 6.00,case_insensitive
+60,26,static,2,case_insensitive
+61,26,static,II,case_insensitive
+62,26,static,two,case_insensitive
+63,27,static,0x01700000,case_insensitive
+64,27,static,0x01780000,case_insensitive
+65,27,static,0x04060000,case_insensitive
+66,27,static,0x04F00000,case_insensitive
+67,27,static,0x07FE0000,case_insensitive
+68,28,static,ICSMA-17-009-01A,case_insensitive
+69,29,static,CVE-2017-5149,case_insensitive
+70,30,static,6.8,case_insensitive
+71,30,static,6.8 medium,case_insensitive
+72,31,static,+46-8-474-4756,case_insensitive
+75,33,static,7/8/2020,case_insensitive
+78,33,static,07/08/2020,case_insensitive
+79,34,static,Zarlink ZL70101,case_insensitive
+80,35,static,blob version 2.0.5-pre2,case_insensitive
+81,36,static,LATTELECOM,case_insensitive
+82,37,static,VCC,case_insensitive
+83,37,static,3.3v,case_insensitive
+84,37,static,3.3 v,case_insensitive
+85,38,static,MERLIN@STCONHOSPITAL,case_insensitive
+86,39,static,Demo,case_insensitive
+87,39,static,Demo Mode,case_insensitive
+88,40,static,41610-02,case_insensitive
+89,41,static,"40,100,400",case_insensitive
+90,41,static,"40, 100, 400",
+91,42,static,9,case_insensitive
+92,43,static,"1.4,2.4",case_insensitive
+93,43,static,"1.4, 2.4",case_insensitive
+94,43,static,"2.4,1.4",case_insensitive
+95,43,static,"2.4, 1.4",case_insensitive
+96,44,static,30,case_insensitive
+97,45,static,Skin Temperature,case_insensitive
+98,45,static,skin temp,case_insensitive
+99,46,static,5,case_insensitive
+100,46,static,five,case_insensitive
+101,47,static,SpO2,case_insensitive
+102,48,static,2,case_insensitive
+103,48,static,two,case_insensitive
+104,48,static,ii,case_insensitive
+105,48,static,II,case_insensitive
+106,49,static,"MX100,MX400",case_insensitive
+107,49,static,"MX400,MX100",case_insensitive
+108,49,static,"MX400, MX100",case_insensitive
+109,49,static,"MX100, MX400",case_insensitive
+110,50,static,PL43106603,case_insensitive
+111,51,static,Improper Input Validation,case_insensitive
+112,52,static,> 5 meohms (@ 10 Hz,case_insensitive
+113,53,static,Manny,case_insensitive
+114,53,static,Mannie,case_insensitive
+115,53,static,Manni,case_insensitive
+116,52,static,greater than 5 meohms,case_insensitive
+117,52,static,5 meohms,case_insensitive
+118,52,static,5 mhom,case_insensitive
+119,55,static,B.06.18,case_insensitive
+120,56,static,Intelliview,case_insensitive
+121,57,static,164.312,case_insensitive
+122,58,static,CVE-2020-16228,case_insensitive
+123,59,static,Iris,case_insensitive
+124,60,static,MOC-9,case_insensitive
+125,25,static,6.00,case_insensitive
+126,25,static,6,case_insensitive
+127,19,static,164 502b,case_insensitive
+128,19,static,164 502 b,case_insensitive
+129,19,static,164 514 d,case_insensitive
+130,19,static,164 514d,case_insensitive
+131,12,static,35085558,case_insensitive
+132,12,static,"35,085,558",case_insensitive
+133,9,static,1290670,case_insensitive
+134,9,static,"1,290,670",case_insensitive
+135,9,static,2000000,case_insensitive
+136,9,static,"2,000,000",case_insensitive
+137,7,static,357,case_insensitive
+138,57,static,45 CFR 164.312(b),case_insensitive
+139,57,static,164.312(b),case_insensitive
+140,57,static,164.312 (b),case_insensitive
+143,57,static,164.312b,case_insensitive
+144,57,static,164.312 b,case_insensitive
+145,61,static,AliveCor,case_insensitive
+146,62,static,Operation,case_insensitive
+147,52,static,> 5 meohms (@ 10 Hz),
+148,52,static,> 5 moehms,
+149,10,static,"Anthem, 78800000",case_insensitive
+150,26,static,Class 2,case_insensitive
+151,26,static,Class II,case_insensitive
+152,26,static,Class two,case_insensitive
+153,34,static,Zarlink ZL70101A,case_insensitive
+154,31,static,46-8-474-4756,case_insensitive
+155,31,static,4684744756,case_insensitive
+156,52,static,5,
+157,31,static,+46-8474-4147,
+158,27,static,0x04a20000,case_insensitive
+159,27,static,0x05f80000,case_insensitive

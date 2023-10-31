@@ -1,0 +1,80 @@
+id,key,value
+1,code_challenges_alembic_version,310eccbf3046
+2,dynamic_challenges_alembic_version,b37fb68807ea
+3,manual_verification_alembic_version,0d0f50cf3822
+4,multiple_choice_alembic_version,832425686fda
+5,services_alembic_version,fb23f0c455e3
+6,webhooks_alembic_version,3b81b5d3514e
+7,ctf_theme,core-beta
+8,ctf_version,3.5.0
+9,webhooks_secret,97546495674778cc152e03c9a87c27d8d7b4c308cf5b56e8dc8c1188baf33bf4
+10,ctf_name,Saint Con Hospital CTF
+11,ctf_description,"Welcome! As a new member of the Saint Con Hospital Cybersecurity Department, your help is needed to ensure the patient information that we store and manage is kept private, safe, and secure. HIPAA requires us to conduct annual cybersecurity training and to test all employees on their knowledge on HIPAA Security. Are you up to the challenge? Are you ready to learn more?"
+12,user_mode,teams
+13,start,
+14,end,1666911600
+15,freeze,
+16,challenge_visibility,private
+17,registration_visibility,public
+18,score_visibility,public
+19,account_visibility,public
+20,verify_emails,1
+21,mail_server,
+22,mail_port,
+23,mail_tls,
+24,mail_ssl,
+25,mail_username,
+26,mail_password,
+27,mail_useauth,
+28,verification_email_subject,Confirm your account for {ctf_name}
+29,verification_email_body,"Welcome to {ctf_name}!
+
+Click the following link to confirm and activate your account:
+{url}
+
+If the link is not clickable, try copying and pasting it into your browser."
+30,successful_registration_email_subject,Successfully registered for {ctf_name}
+31,successful_registration_email_body,You've successfully registered for {ctf_name}!
+32,user_creation_email_subject,Message from {ctf_name}
+33,user_creation_email_body,"A new account has been created for you for {ctf_name} at {url}. 
+
+Username: {name}
+Password: {password}"
+34,password_reset_subject,Password Reset Request from {ctf_name}
+35,password_reset_body,"Did you initiate a password reset on {ctf_name}? If you didn't initiate this request you can ignore this email. 
+
+Click the following link to reset your password:
+{url}
+
+If the link is not clickable, try copying and pasting it into your browser."
+36,password_change_alert_subject,Password Change Confirmation for {ctf_name}
+37,password_change_alert_body,"Your password for {ctf_name} has been changed.
+
+If you didn't request a password change you can reset your password here: {url}"
+38,setup,1
+39,domain_whitelist,
+40,team_creation,1
+41,team_size,5
+42,num_teams,
+43,team_disbanding,inactive_only
+44,incorrect_submissions_per_min,
+45,name_changes,0
+46,tos_url,
+47,tos_text,"* SAINTCON Terms of Service: https://saintcon.org/terms/
+* SAINTCON Code of Conduct: https://saintcon.org/coc/"
+48,privacy_url,
+49,privacy_text,"* SAINTCON Terms of Service: https://saintcon.org/terms/
+* SAINTCON Code of Conduct: https://saintcon.org/coc/"
+50,ctf_logo,
+51,ctf_small_icon,726d85e553de1aa736ef16a547b15afb/Twitter-02.png
+52,theme_header,"<style id=""theme-color"">
+:root {--theme-color: #000000;}
+.navbar{background-color: var(--theme-color) !important;}
+.jumbotron{background-color: var(--theme-color) !important;}
+</style>
+"
+53,theme_footer,"<img src=""https://saintcon.org/wp-content/uploads/2022/04/Footer-Industrial.svg""> "
+54,theme_settings,
+55,view_after_ctf,1
+56,sso_alembic_version,9950c444d561
+57,paused,0

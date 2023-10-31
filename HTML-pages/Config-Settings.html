@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://saintconhospital.ctfd.io/admin/config -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Admin Panel</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://cdn.cloud.ctfd.io/saintconhospital/themes/core/static/img/favicon.ico?t=1586721198" type="image/x-icon">
+	<link rel="icon" href="https://cdn.cloud.ctfd.io/saintconhospital/themes/core/static/img/favicon.ico?t=1586721198" type="image/x-icon">
+	<link rel="stylesheet" href="./Config-Settings_files/fonts.min.css">
+	<link rel="stylesheet" href="./Config-Settings_files/main.min.css">
+	<link rel="stylesheet" href="./Config-Settings_files/admin.min.css">
+	<link rel="stylesheet" href="./Config-Settings_files/codemirror.min.css">
+	<script type="text/javascript" src="./Config-Settings_files/vendor.06c7227b.js"></script><script type="text/javascript" src="./Config-Settings_files/main.851b6206.js"></script><script type="text/javascript" async="" src="./Config-Settings_files/saved_resource"></script><script type="text/javascript">
+		var init = {
+			'urlRoot': "",
+			'csrfNonce': "ecafdc2ee19af3d99121d34ebe8dc541d1a925592c8864be21bd31ee5e3fa019",
+			'userMode': "teams",
+			'userId': 1,
+			'userName': "detcidda2",
+			'userEmail': "detcidda2@protonmail.com",
+			'teamId': null, 
+			'teamName': null,
+			'start': null,
+			'end': 1666911600
+		}
+	</script>
+	
+	<link rel="stylesheet" type="text/css" href="./Config-Settings_files/codemirror.min.css">
+
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a href="https://saintconhospital.ctfd.io/" class="navbar-brand">CTFd</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="base-navbars">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/statistics">Statistics</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/notifications">Notifications</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="https://saintconhospital.ctfd.io/admin/config#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Pages</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/pages">All Pages</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/pages/new">New Page</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/users">Users</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/teams">Teams</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/scoreboard">Scoreboard</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/challenges">Challenges</a></li>
+					<li class="nav-item dropdown">
+						<a href="https://saintconhospital.ctfd.io/admin/config#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Submissions</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions">All Submissions</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/correct">Correct Submissions</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/incorrect">Incorrect Submissions</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config">Config</a></li>
+
+					
+					
+					
+						<li class="nav-item">
+							<a class="nav-link d-none d-md-block d-lg-block">|</a>
+						</li>
+
+						
+							
+								
+							
+							<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/services">Services</a></li>
+						
+
+						
+						<li class="nav-item dropdown">
+							<a href="https://saintconhospital.ctfd.io/admin/config#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/plugins/webhooks">Webhooks</a>
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/plugins/sso">Single sign-on</a>
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/pending">Manual Submissions</a>
+									
+							</ul>
+						</li>
+						
+					
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item">
+						<a class="nav-link" href="https://docs.ctfd.io/" target="_blank">
+							<i class="far fa-question-circle"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main role="main">
+		
+		
+<div class="jumbotron">
+	<div class="container">
+		<h1>Configuration</h1>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<ul class="nav nav-pills flex-column">
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#appearance" role="tab" data-toggle="tab" aria-selected="false">Appearance</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#theme" role="tab" data-toggle="tab" aria-selected="false">Theme</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#accounts" role="tab" data-toggle="tab" aria-selected="false">Accounts</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#fields" role="tab" data-toggle="tab" aria-selected="false">Custom Fields</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#mlc" role="tab" data-toggle="tab" aria-selected="false">MajorLeagueCyber</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0 active" href="https://saintconhospital.ctfd.io/admin/config#settings" role="tab" data-toggle="tab" aria-selected="true">Settings</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#security" role="tab" data-toggle="tab">Security</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#email" role="tab" data-toggle="tab">Email</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#ctftime" role="tab" data-toggle="tab">Time</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#legal" role="tab" data-toggle="tab">Legal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#backup" role="tab" data-toggle="tab">Backup</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/config#usermode" role="tab" data-toggle="tab">User Mode</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link rounded-0" href="https://saintconhospital.ctfd.io/admin/reset" role="tab">Reset</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-9">
+			
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane config-section" id="appearance">
+	<form method="POST" autocomplete="off" class="w-100">
+		<div class="form-group">
+			<label for="ctf_name">
+				Competition Name
+				<small class="form-text text-muted">Competition name displayed instead of a logo</small>
+			</label>
+			<input class="form-control" id="ctf_name" name="ctf_name" type="text" placeholder="CTF Name" value="Saint Con Hospital CTF">
+		</div>
+
+		<div class="form-group">
+			<label>
+				CTF Description<br>
+				<small class="form-text text-muted">
+					Description for the CTF
+				</small>
+			</label>
+			<textarea class="form-control" type="text" id="ctf_description" name="ctf_description" rows="5">Welcome! As a new member of the Saint Con Hospital Cybersecurity Department, your help is needed to ensure the patient information that we store and manage is kept private, safe, and secure. HIPAA requires us to conduct annual cybersecurity training and to test all employees on their knowledge on HIPAA Security. Are you up to the challenge? Are you ready to learn more?</textarea>
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="theme">
+	<form id="logo-upload" class="form-upload" method="POST" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="ctf_logo">
+				Logo
+				<small class="form-text text-muted">
+					Logo to use for the website instead of a CTF name.
+				</small>
+			</label>
+
+			
+
+			<div class="row">
+				<div class="col-md-9">
+					<input class="form-control-file" id="ctf_logo_file" name="file" type="file" accept="image/*" placeholder="CTF Logo">
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="d-inline-block float-right">
+							<button type="submit" class="btn-sm btn-primary float-right">Upload</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<form id="ctf-small-icon-upload" class="form-upload" method="POST" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="small_icon">
+				Small Icon
+				<small class="form-text text-muted">
+					<a href="https://en.wikipedia.org/wiki/Favicon" target="_blank">favicon</a> used in user's browsers. Only PNGs accepted. Must be 32x32px.
+				</small>
+			</label>
+
+			
+				<div class="d-block py-3">
+					<img id="ctf_small_icon_preview" class="img-responsive ctf_small_icon" src="./Config-Settings_files/Twitter-02.png" height="32">
+					<button type="button" id="remove-small-icon" class="btn-sm btn-danger">
+						Remove Icon
+					</button>
+				</div>
+			
+
+			<div class="row">
+				<div class="col-md-9">
+					<input class="form-control-file" id="ctf_small_icon_file" name="file" type="file" accept=".png" placeholder="Small Icon">
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<div class="d-inline-block float-right">
+							<button type="submit" class="btn-sm btn-primary float-right">Upload</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<hr>
+
+	<div class="modal fade" role="document" id="theme-settings-modal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Theme Settings</h5>
+				</div>
+				<div class="modal-body">
+				<form>
+  <div class="form-group">
+    <label>Challenge Window Size</label>
+    <select class="form-control custom-select" name="challenge_window_size">
+        <option value="sm">Small</option>
+        <option value="norm">Normal</option>
+        <option value="lg">Large</option>
+        <option value="xl">Extra Large</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>
+      Challenge Category Order Custom Function<br>
+      <small class="form-text text-muted">
+        Define a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description" target="_blank">custom compareFn function for Array.sort()</a> 
+        used to sort the challenge categories
+      </small>
+    </label>
+    <textarea class="form-control text-monospace" name="challenge_category_order" rows="5"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label>
+      Challenge Order Custom Function<br>
+      <small class="form-text text-muted">
+        Define a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description" target="_blank">custom compareFn function for Array.sort()</a> 
+        used to sort the challenges within categories
+      </small>
+    </label>
+    <textarea class="form-control text-monospace" name="challenge_order" rows="5"></textarea>
+  </div>
+
+  <div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="use_builtin_code_highlighter" name="use_builtin_code_highlighter" checked="">
+      <label class="form-check-label" for="use_builtin_code_highlighter">
+        Use Built-In Syntax Highlighter
+      </label>
+    </div>
+    <small class="form-text text-muted">
+      The built-in syntax highlighter is lightweight and fast but may not always correctly highlight all languages. You can disable the built-in highlighter in order to use your own.
+    </small>
+  </div>
+
+  <button type="submit" class="btn btn-primary float-right mt-4">Update</button>
+</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<form method="POST" autocomplete="off" class="w-100">
+		<div class="form-group">
+			<label for="ctf_theme">
+				Theme
+				<small class="form-text text-muted">
+					Switch themes to change CTFd's aesthetics
+				</small>
+			</label>
+			<select class="form-control custom-select" id="ctf_theme" name="ctf_theme">
+				<option>core-beta</option>
+				
+					<option>learning</option>
+				
+					<option>hacker-theme</option>
+				
+					<option>core</option>
+				
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Theme Color
+				<small class="form-text text-muted">
+					Color used by theme to control aesthetics. Requires theme support.
+				</small>
+			</label>
+			<div class="d-inline-block">
+				<input type="color" id="config-color-picker">
+				<button type="button" class="btn-sm btn-primary" id="config-color-update">Update CSS</button>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Theme Header
+				<small class="form-text text-muted">
+					Theme headers are inserted just before the <code>&lt;/head&gt;</code> tag on all public facing pages.
+					Requires theme support.
+				</small>
+			</label>
+			<textarea class="form-control" id="theme-header" name="theme_header" rows="7" style="display: none;">&lt;style id="theme-color"&gt;
+:root {--theme-color: #000000;}
+.navbar{background-color: var(--theme-color) !important;}
+.jumbotron{background-color: var(--theme-color) !important;}
+&lt;/style&gt;
+</textarea><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 35px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 0px;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; padding-right: 0px; padding-bottom: 0px; margin-bottom: -15px; border-right-width: 35px; min-height: 116px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 18px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">style</span> <span class="cm-attribute">id</span>=<span class="cm-string">"theme-color"</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">:<span class="cm-variable-3">root</span> {<span class="cm-variable-2">--theme-color</span>: <span class="cm-atom">#000000</span>;}</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.navbar</span>{<span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--theme-color</span>) <span class="cm-keyword">!important</span>;}</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-qualifier">.jumbotron</span>{<span class="cm-property">background-color</span>: <span class="cm-variable cm-callee">var</span>(<span class="cm-variable-2">--theme-color</span>) <span class="cm-keyword">!important</span>;}</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">style</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 116px;"></div><div class="CodeMirror-gutters" style="height: 151px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Theme Footer
+				<small class="form-text text-muted">
+					Theme footers are inserted just before the <code>&lt;/body&gt;</code> tag on all public facing pages.
+					Requires theme support.
+				</small>
+			</label>
+			<textarea class="form-control" id="theme-footer" name="theme_footer" rows="7" style="display: none;">&lt;img src="https://saintcon.org/wp-content/uploads/2022/04/Footer-Industrial.svg"&gt; </textarea><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 35px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="bottom: 0px;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; padding-right: 0px; padding-bottom: 0px; margin-bottom: -15px; border-right-width: 35px; min-height: 26px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 18px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">img</span> <span class="cm-attribute">src</span>=<span class="cm-string">"https://saintcon.org/wp-content/uploads/2022/04/Footer-Industrial.svg"</span><span class="cm-tag cm-bracket">&gt;</span> </span></pre></div></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 61px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+		</div>
+
+		<div class="form-group">
+			<label for="ctf_theme">
+				Theme Settings
+			</label>
+			<div class="d-block pb-2">
+				<button type="button" class="btn-sm btn-primary" id="theme-settings-button">
+					Settings Editor
+				</button>
+			</div>
+			<textarea class="form-control" id="theme-settings" name="theme_settings" rows="7" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 35px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" readonly="" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -15px; border-right-width: 35px; min-height: 26px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 18px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 61px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+			<small class="form-text text-muted">
+				Settings specific to the theme
+			</small>
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="accounts">
+
+	
+	
+	
+	
+	<form method="POST" autocomplete="off" class="w-100">
+
+		<div class="form-group">
+			<label for="domain_whitelist">Account Email Whitelist</label>
+			<input class="form-control" id="domain_whitelist" name="domain_whitelist" type="text" value="">
+			<small class="form-text text-muted">
+				Comma-seperated email domains which users can register under (e.g. ctfd.io, gmail.com, yahoo.com)
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="verify_emails">Verify Emails</label>
+			<select class="form-control custom-select" id="verify_emails" name="verify_emails"><option selected="" value="true">Enabled</option><option value="false">Disabled</option></select>
+			<small class="form-text text-muted">
+				Control whether users must confirm their email addresses before playing
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="team_creation">Team Creation</label>
+			<select class="form-control" id="team_creation" name="team_creation" value="true"><option selected="" value="true">Enabled</option><option value="false">Disabled</option></select>
+			<small class="form-text text-muted">
+				Control whether users can create their own teams (Teams mode only)
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="team_size">Team Size</label>
+			<input class="form-control" id="team_size" min="0" name="team_size" type="number" value="5">
+			<small class="form-text text-muted">
+				Amount of users per team (Teams mode only)
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="num_teams">Total Number of Teams</label>
+			<input class="form-control" id="num_teams" min="0" name="num_teams" type="number" value="None">
+			<small class="form-text text-muted">
+				Max number of teams (Teams mode only)
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="team_disbanding">Team Disbanding</label>
+			<select class="form-control" id="team_disbanding" name="team_disbanding" value="inactive_only"><option selected="" value="inactive_only">Enabled for Inactive Teams</option><option value="disabled">Disabled</option></select>
+			<small class="form-text text-muted">
+				Control whether team captains are allowed to disband their own teams
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="incorrect_submissions_per_min">Incorrect Submissions per Minute</label>
+			<input class="form-control" id="incorrect_submissions_per_min" min="1" name="incorrect_submissions_per_min" type="number" value="None">
+			<small class="form-text text-muted">
+				Amount of submissions allowed per minute for flag bruteforce protection (default: 10)
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label for="name_changes">Name Changes</label>
+			<select class="form-control custom-select" id="name_changes" name="name_changes"><option value="true">Enabled</option><option selected="" value="false">Disabled</option></select>
+			<small class="form-text text-muted">
+				Control whether users and teams can change their names
+			</small>
+		</div>
+
+		<input class="btn btn-md btn-primary float-right" id="_submit" name="_submit" type="submit" value="Update">
+	</form>
+	
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="fields">
+	<form method="POST" autocomplete="off" class="w-100">
+		<h5>Custom Fields</h5>
+
+		<small class="form-text text-muted">
+			Add custom fields to get additional data from your participants
+		</small>
+
+		<ul class="nav nav-tabs mt-3" role="tablist">
+			<li class="nav-item active">
+				<a class="nav-link active" href="https://saintconhospital.ctfd.io/admin/config#user-fields" role="tab" data-toggle="tab" aria-selected="true">
+					Users
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#team-fields" role="tab" data-toggle="tab" aria-selected="false">
+					Teams
+				</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="user-fields">
+				<div class="col-md-12 py-3">
+					<small>Custom user fields are shown during registration. Users can optionally edit these fields in their profile.</small>
+				</div>
+
+				<div id="user-field-list" class="pt-3">
+				<div> <div class="row"><div class="col text-center"><button type="button" class="btn btn-sm btn-success btn-outlined m-auto">
+        Add New Field
+      </button></div></div></div></div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="team-fields">
+				<div class="col-md-12 py-3">
+					<small>Custom team fields are shown during team creation. Team captains can optionally edit these fields in the team profile.</small>
+				</div>
+
+				<div id="team-field-list" class="pt-3">
+				<div> <div class="row"><div class="col text-center"><button type="button" class="btn btn-sm btn-success btn-outlined m-auto">
+        Add New Field
+      </button></div></div></div></div>
+			</div>
+		</div>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="mlc">
+	<form method="POST" autocomplete="off" class="w-100">
+
+		<div class="form-group">
+			<label>
+				Client ID
+				<small class="form-text text-muted">
+					OAuth Client ID for <a href="https://majorleaguecyber.org/">MajorLeagueCyber</a> integration.
+				</small>
+			</label>
+			<input class="form-control" id="oauth_client_id" name="oauth_client_id" type="text" placeholder="">
+		</div>
+
+		<div class="form-group">
+			<label>
+				Client Secret
+				<small class="form-text text-muted">
+					OAuth Client Secret for <a href="https://majorleaguecyber.org/">MajorLeagueCyber</a> integration.
+				</small>
+			</label>
+			<input class="form-control" id="oauth_client_secret" name="oauth_client_secret" type="text" placeholder="">
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section active" id="settings">
+	<form method="POST" autocomplete="off" class="w-100">
+		<div class="form-group">
+			<label>
+				Challenge Visibility<br>
+				<small class="form-text text-muted">
+					Control whether users must be logged in to see challenges
+				</small>
+			</label>
+			<select class="form-control custom-select" name="challenge_visibility">
+				<option value="public">
+					Public
+				</option>
+				<option value="private" selected="">
+					Private
+				</option>
+				<option value="admins">
+					Admins Only
+				</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Score Visibility<br>
+				<small class="form-text text-muted">
+					Control whether solves/score are shown to the public, to logged in users, hidden to all non-admins, or only shown to admins
+				</small>
+			</label>
+			<select class="form-control custom-select" name="score_visibility">
+				<option value="public" selected="">
+					Public
+				</option>
+				<option value="private">
+					Private
+				</option>
+				<option value="hidden">
+					Hidden
+				</option>
+				<option value="admins">
+					Admins Only
+				</option>
+			</select>
+			<small class="form-text text-muted">
+				This setting should generally be the same as Account Visibility to avoid conflicts.
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Account Visibility<br>
+				<small class="form-text text-muted">
+					Control whether accounts (users &amp; teams) are shown to everyone, only to authenticated users, or only to admins
+				</small>
+			</label>
+			<select class="form-control custom-select" name="account_visibility">
+				<option value="public" selected="">
+					Public
+				</option>
+				<option value="private">
+					Private
+				</option>
+				<option value="admins">
+					Admins Only
+				</option>
+			</select>
+			<small class="form-text text-muted">
+				This setting should generally be the same as Score Visibility to avoid conflicts.
+			</small>
+		</div>
+
+		<div class="form-group">
+			<label>
+				Registration Visibility<br>
+				<small class="form-text text-muted">
+					Control whether registration is enabled for everyone or disabled
+				</small>
+			</label>
+			<select class="form-control custom-select" name="registration_visibility">
+				<option value="public" selected="">
+					Public
+				</option>
+				<option value="private">
+					Private
+				</option>
+				<option value="mlc">
+					MajorLeagueCyber Only
+				</option>
+			</select>
+		</div>
+
+		<div class="form-group">
+			<div class="form-check">
+				<label>
+					<input id="paused" name="paused" type="checkbox">
+					Pause CTF<br>
+					<small>
+						Prevent users from submitting answers until unpaused. Challenges can still be viewed.
+					</small>
+				</label>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="security">
+	<form method="POST" autocomplete="off" class="w-100">
+		<div class="form-group">
+			<label for="ctf_name">
+				Registration Code
+				<small class="form-text text-muted">Registration Code required for account registration (SSO excluded)</small>
+			</label>
+			<input class="form-control" id="registration_code" name="registration_code" type="text" placeholder="Registration Code">
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="email">
+	<form method="POST" autocomplete="off" class="w-100">
+		<h5>Email Content</h5>
+		<small class="form-text text-muted">
+			Customize CTFd emails with <a href="https://docs.ctfd.io/docs/settings/emails/#email-content" target="_blank">predefined variables</a> and custom content
+		</small>
+		<ul class="nav nav-tabs mt-3" role="tablist">
+			<li class="nav-item active">
+				<a class="nav-link active" href="https://saintconhospital.ctfd.io/admin/config#confirmation-email-tab" role="tab" data-toggle="tab">
+					Confirmation
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#account-details-email-tab" role="tab" data-toggle="tab">Account Details</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#password-reset-email-tab" role="tab" data-toggle="tab">Password Reset</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="confirmation-email-tab">
+				<div class="form-group">
+					<label class="pt-3">
+						Account Registration<br>
+						<small class="form-text text-muted">
+							Email sent to users after they've registered their account entirely
+						</small>
+					</label>
+					<div>
+						<label>
+							Subject
+						</label>
+						<input class="form-control" id="successful_registration_email_subject" name="successful_registration_email_subject" type="text" value="Successfully registered for {ctf_name}">
+						<label>
+							Body
+						</label>
+						<textarea class="form-control" type="text" id="successful_registration_email_body" name="successful_registration_email_body" rows="5">You've successfully registered for {ctf_name}!</textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="pt-3">
+						Account Confirmation<br>
+						<small class="form-text text-muted">
+							Email sent to users to confirm their account
+						</small>
+					</label>
+					<div>
+						<label>
+							Subject
+						</label>
+						<input class="form-control" id="verification_email_subject" name="verification_email_subject" type="text" value="Confirm your account for {ctf_name}">
+						<label>
+							Body
+						</label>
+						<textarea class="form-control" type="text" id="verification_email_body" name="verification_email_body" rows="5">Welcome to {ctf_name}!
+
+Click the following link to confirm and activate your account:
+{url}
+
+If the link is not clickable, try copying and pasting it into your browser.</textarea>
+					</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="account-details-email-tab">
+				<div class="form-group">
+					<label class="pt-3">
+						New Account Details<br>
+						<small class="form-text text-muted">
+							Email sent to new users (created by an admin) with their initial account details
+						</small>
+					</label>
+					<div>
+						<label>
+							Subject
+						</label>
+						<input class="form-control" id="user_creation_email_subject" name="user_creation_email_subject" type="text" value="Message from {ctf_name}">
+						<label>
+							Body
+						</label>
+						<textarea class="form-control" type="text" id="user_creation_email_body" name="user_creation_email_body" rows="5">A new account has been created for you for {ctf_name} at {url}. 
+
+Username: {name}
+Password: {password}</textarea>
+					</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="password-reset-email-tab">
+				<div class="form-group">
+					<label class="pt-3">
+						Password Reset Request<br>
+						<small class="form-text text-muted">
+							Email sent whent a user requests a password reset
+						</small>
+					</label>
+					<div>
+						<label>
+							Subject
+						</label>
+						<input class="form-control" id="password_reset_subject" name="password_reset_subject" type="text" value="Password Reset Request from {ctf_name}">
+						<label>
+							Body
+						</label>
+						<textarea class="form-control" type="text" id="password_reset_body" name="password_reset_body" rows="5">Did you initiate a password reset on {ctf_name}? If you didn't initiate this request you can ignore this email. 
+
+Click the following link to reset your password:
+{url}
+
+If the link is not clickable, try copying and pasting it into your browser.</textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="pt-3">
+						Password Reset Confirmation<br>
+						<small class="form-text text-muted">
+							Email sent whent a user successfully resets their password
+						</small>
+					</label>
+					<div>
+						<label>
+							Subject
+						</label>
+						<input class="form-control" id="password_change_alert_subject" name="password_change_alert_subject" type="text" value="Password Change Confirmation for {ctf_name}">
+						<label>
+							Body
+						</label>
+						<textarea class="form-control" type="text" id="password_change_alert_body" name="password_change_alert_body" rows="5">Your password for {ctf_name} has been changed.
+
+If you didn't request a password change you can reset your password here: {url}</textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="my-5">
+
+		<h5>Email Server</h5>
+		<small class="form-text text-muted">
+			Change the email server used by CTFd to send email
+		</small>
+		<ul class="nav nav-tabs my-3" role="tablist">
+			<li class="nav-item active">
+				<a class="nav-link active" href="https://saintconhospital.ctfd.io/admin/config#mailserver" role="tab" data-toggle="tab">Mail
+					Server</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#mailgun" role="tab" data-toggle="tab">Mailgun</a>
+			</li>
+		</ul>
+
+		<div class="form-group">
+			<label>
+				Mail From Address<br>
+				<small class="form-text text-muted">
+					Email address used to send email
+				</small>
+			</label>
+			<input class="form-control" id="mailfrom_addr" name="mailfrom_addr" type="text">
+		</div>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="mailserver">
+
+				<div class="form-group">
+					<label>
+						Mail Server Address<br>
+						<small class="form-text text-muted">
+							Mail Server Address
+						</small>
+					</label>
+					<input class="form-control" id="mail_server" name="mail_server" type="text">
+				</div>
+
+				<div class="form-group">
+					<label>
+						Mail Server Port<br>
+						<small class="form-text text-muted">
+							Mail Server Port
+						</small>
+					</label>
+					<input class="form-control" id="mail_port" name="mail_port" type="text">
+				</div>
+				<div class="form-check">
+					<label>
+						<input id="mail_useauth" name="mail_useauth" type="checkbox">
+						Use Mail Server Username and Password
+					</label>
+				</div>
+				<div id="mail_username_password" style="display: none;">
+					<div class="form-group">
+						<label>
+							Username<br>
+							<small class="form-text text-muted">
+								Mail Server Account Username
+							</small>
+						</label>
+						
+						<input class="form-control" id="mail_username" name="mail_username" autocomplete="off" type="text">
+					</div>
+					<div class="form-group">
+						<label for="mail_password">
+							Password<br>
+							<small class="form-text text-muted">
+								Mail Server Account Password
+							</small>
+						</label>
+						
+						<input class="form-control" id="mail_password" name="mail_password" autocomplete="off" type="password">
+					</div>
+					<sup>Uncheck setting and update to remove username and password</sup>
+					<br>
+					<br>
+				</div>
+				<div class="form-check">
+					<label>
+						<input id="mail_ssl" name="mail_ssl" type="checkbox">
+						SSL
+					</label>
+				</div>
+				<div class="form-check">
+					<label>
+						<input id="mail_tls" name="mail_tls" type="checkbox">
+						TLS
+					</label>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="mailgun">
+				<div class="alert alert-warning" role="alert">
+					Mailgun integration is deprecated! Please see your Mailgun account for SMTP credentials.
+				</div>
+				<div class="form-group">
+					<label>
+						Mailgun API Base URL<br>
+						<small class="form-text text-muted">
+							Mailgun API Base URL
+						</small>
+					</label>
+					<input class="form-control" id="mailgun_base_url" name="mailgun_base_url" type="text">
+				</div>
+				<div class="form-group">
+					<label>
+						Mailgun API Key<br>
+						<small class="form-text text-muted">
+							Mailgun API Key
+						</small>
+					</label>
+					<input class="form-control" id="mailgun_api_key" name="mailgun_api_key" type="text">
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="ctftime">
+	<form method="POST" autocomplete="off" class="w-100">
+		<ul class="nav nav-tabs mb-3">
+			<li class="nav-item">
+				<a class="nav-link active" href="https://saintconhospital.ctfd.io/admin/config#start-date" aria-controls="start-date" role="tab" data-toggle="tab">
+					Start Time
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#end-date" aria-controls="end-date" role="tab" data-toggle="tab">
+					End Time
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#freeze-date" aria-controls="freeze-date" role="tab" data-toggle="tab">
+					Freeze Time
+				</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="start-date">
+				<div class="row" id="start-date">
+					<div class="col-md-12">
+						<p>This is the time when the competition will begin. Challenges will automatically
+							unlock and users will be able to submit answers.</p>
+						<sub class="text-muted text-right mb-3">* All time fields required</sub>
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="start-month">Month:</label>
+						<input class="form-control start-date" id="start-month" min="0" max="12" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="start-day">Day:</label>
+						<input class="form-control start-date" id="start-day" min="0" max="31" type="number">
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="start-year">Year:</label>
+						<input class="form-control start-date" id="start-year" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="start-hour">Hour:</label>
+						<input class="form-control start-date" id="start-hour" min="0" max="23" type="number">
+					</div>
+
+					<div class="form-group col-md-3">
+						<label for="start-minute">Minute:</label>
+						<input class="form-control start-date" id="start-minute" min="0" max="59" type="number">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="start-timezone">Timezone:</label>
+						<select class="form-control custom-select start-date" id="start-timezone">
+						<option>America/Denver</option><option>Africa/Abidjan</option><option>Africa/Accra</option><option>Africa/Addis_Ababa</option><option>Africa/Algiers</option><option>Africa/Asmara</option><option>Africa/Asmera</option><option>Africa/Bamako</option><option>Africa/Bangui</option><option>Africa/Banjul</option><option>Africa/Bissau</option><option>Africa/Blantyre</option><option>Africa/Brazzaville</option><option>Africa/Bujumbura</option><option>Africa/Cairo</option><option>Africa/Casablanca</option><option>Africa/Ceuta</option><option>Africa/Conakry</option><option>Africa/Dakar</option><option>Africa/Dar_es_Salaam</option><option>Africa/Djibouti</option><option>Africa/Douala</option><option>Africa/El_Aaiun</option><option>Africa/Freetown</option><option>Africa/Gaborone</option><option>Africa/Harare</option><option>Africa/Johannesburg</option><option>Africa/Juba</option><option>Africa/Kampala</option><option>Africa/Khartoum</option><option>Africa/Kigali</option><option>Africa/Kinshasa</option><option>Africa/Lagos</option><option>Africa/Libreville</option><option>Africa/Lome</option><option>Africa/Luanda</option><option>Africa/Lubumbashi</option><option>Africa/Lusaka</option><option>Africa/Malabo</option><option>Africa/Maputo</option><option>Africa/Maseru</option><option>Africa/Mbabane</option><option>Africa/Mogadishu</option><option>Africa/Monrovia</option><option>Africa/Nairobi</option><option>Africa/Ndjamena</option><option>Africa/Niamey</option><option>Africa/Nouakchott</option><option>Africa/Ouagadougou</option><option>Africa/Porto-Novo</option><option>Africa/Sao_Tome</option><option>Africa/Timbuktu</option><option>Africa/Tripoli</option><option>Africa/Tunis</option><option>Africa/Windhoek</option><option>America/Adak</option><option>America/Anchorage</option><option>America/Anguilla</option><option>America/Antigua</option><option>America/Araguaina</option><option>America/Argentina/Buenos_Aires</option><option>America/Argentina/Catamarca</option><option>America/Argentina/ComodRivadavia</option><option>America/Argentina/Cordoba</option><option>America/Argentina/Jujuy</option><option>America/Argentina/La_Rioja</option><option>America/Argentina/Mendoza</option><option>America/Argentina/Rio_Gallegos</option><option>America/Argentina/Salta</option><option>America/Argentina/San_Juan</option><option>America/Argentina/San_Luis</option><option>America/Argentina/Tucuman</option><option>America/Argentina/Ushuaia</option><option>America/Aruba</option><option>America/Asuncion</option><option>America/Atikokan</option><option>America/Atka</option><option>America/Bahia</option><option>America/Bahia_Banderas</option><option>America/Barbados</option><option>America/Belem</option><option>America/Belize</option><option>America/Blanc-Sablon</option><option>America/Boa_Vista</option><option>America/Bogota</option><option>America/Boise</option><option>America/Buenos_Aires</option><option>America/Cambridge_Bay</option><option>America/Campo_Grande</option><option>America/Cancun</option><option>America/Caracas</option><option>America/Catamarca</option><option>America/Cayenne</option><option>America/Cayman</option><option>America/Chicago</option><option>America/Chihuahua</option><option>America/Coral_Harbour</option><option>America/Cordoba</option><option>America/Costa_Rica</option><option>America/Creston</option><option>America/Cuiaba</option><option>America/Curacao</option><option>America/Danmarkshavn</option><option>America/Dawson</option><option>America/Dawson_Creek</option><option>America/Denver</option><option>America/Detroit</option><option>America/Dominica</option><option>America/Edmonton</option><option>America/Eirunepe</option><option>America/El_Salvador</option><option>America/Ensenada</option><option>America/Fort_Nelson</option><option>America/Fort_Wayne</option><option>America/Fortaleza</option><option>America/Glace_Bay</option><option>America/Godthab</option><option>America/Goose_Bay</option><option>America/Grand_Turk</option><option>America/Grenada</option><option>America/Guadeloupe</option><option>America/Guatemala</option><option>America/Guayaquil</option><option>America/Guyana</option><option>America/Halifax</option><option>America/Havana</option><option>America/Hermosillo</option><option>America/Indiana/Indianapolis</option><option>America/Indiana/Knox</option><option>America/Indiana/Marengo</option><option>America/Indiana/Petersburg</option><option>America/Indiana/Tell_City</option><option>America/Indiana/Vevay</option><option>America/Indiana/Vincennes</option><option>America/Indiana/Winamac</option><option>America/Indianapolis</option><option>America/Inuvik</option><option>America/Iqaluit</option><option>America/Jamaica</option><option>America/Jujuy</option><option>America/Juneau</option><option>America/Kentucky/Louisville</option><option>America/Kentucky/Monticello</option><option>America/Knox_IN</option><option>America/Kralendijk</option><option>America/La_Paz</option><option>America/Lima</option><option>America/Los_Angeles</option><option>America/Louisville</option><option>America/Lower_Princes</option><option>America/Maceio</option><option>America/Managua</option><option>America/Manaus</option><option>America/Marigot</option><option>America/Martinique</option><option>America/Matamoros</option><option>America/Mazatlan</option><option>America/Mendoza</option><option>America/Menominee</option><option>America/Merida</option><option>America/Metlakatla</option><option>America/Mexico_City</option><option>America/Miquelon</option><option>America/Moncton</option><option>America/Monterrey</option><option>America/Montevideo</option><option>America/Montreal</option><option>America/Montserrat</option><option>America/Nassau</option><option>America/New_York</option><option>America/Nipigon</option><option>America/Nome</option><option>America/Noronha</option><option>America/North_Dakota/Beulah</option><option>America/North_Dakota/Center</option><option>America/North_Dakota/New_Salem</option><option>America/Nuuk</option><option>America/Ojinaga</option><option>America/Panama</option><option>America/Pangnirtung</option><option>America/Paramaribo</option><option>America/Phoenix</option><option>America/Port-au-Prince</option><option>America/Port_of_Spain</option><option>America/Porto_Acre</option><option>America/Porto_Velho</option><option>America/Puerto_Rico</option><option>America/Punta_Arenas</option><option>America/Rainy_River</option><option>America/Rankin_Inlet</option><option>America/Recife</option><option>America/Regina</option><option>America/Resolute</option><option>America/Rio_Branco</option><option>America/Rosario</option><option>America/Santa_Isabel</option><option>America/Santarem</option><option>America/Santiago</option><option>America/Santo_Domingo</option><option>America/Sao_Paulo</option><option>America/Scoresbysund</option><option>America/Shiprock</option><option>America/Sitka</option><option>America/St_Barthelemy</option><option>America/St_Johns</option><option>America/St_Kitts</option><option>America/St_Lucia</option><option>America/St_Thomas</option><option>America/St_Vincent</option><option>America/Swift_Current</option><option>America/Tegucigalpa</option><option>America/Thule</option><option>America/Thunder_Bay</option><option>America/Tijuana</option><option>America/Toronto</option><option>America/Tortola</option><option>America/Vancouver</option><option>America/Virgin</option><option>America/Whitehorse</option><option>America/Winnipeg</option><option>America/Yakutat</option><option>America/Yellowknife</option><option>Antarctica/Casey</option><option>Antarctica/Davis</option><option>Antarctica/DumontDUrville</option><option>Antarctica/Macquarie</option><option>Antarctica/Mawson</option><option>Antarctica/McMurdo</option><option>Antarctica/Palmer</option><option>Antarctica/Rothera</option><option>Antarctica/South_Pole</option><option>Antarctica/Syowa</option><option>Antarctica/Troll</option><option>Antarctica/Vostok</option><option>Arctic/Longyearbyen</option><option>Asia/Aden</option><option>Asia/Almaty</option><option>Asia/Amman</option><option>Asia/Anadyr</option><option>Asia/Aqtau</option><option>Asia/Aqtobe</option><option>Asia/Ashgabat</option><option>Asia/Ashkhabad</option><option>Asia/Atyrau</option><option>Asia/Baghdad</option><option>Asia/Bahrain</option><option>Asia/Baku</option><option>Asia/Bangkok</option><option>Asia/Barnaul</option><option>Asia/Beirut</option><option>Asia/Bishkek</option><option>Asia/Brunei</option><option>Asia/Calcutta</option><option>Asia/Chita</option><option>Asia/Choibalsan</option><option>Asia/Chongqing</option><option>Asia/Chungking</option><option>Asia/Colombo</option><option>Asia/Dacca</option><option>Asia/Damascus</option><option>Asia/Dhaka</option><option>Asia/Dili</option><option>Asia/Dubai</option><option>Asia/Dushanbe</option><option>Asia/Famagusta</option><option>Asia/Gaza</option><option>Asia/Harbin</option><option>Asia/Hebron</option><option>Asia/Ho_Chi_Minh</option><option>Asia/Hong_Kong</option><option>Asia/Hovd</option><option>Asia/Irkutsk</option><option>Asia/Istanbul</option><option>Asia/Jakarta</option><option>Asia/Jayapura</option><option>Asia/Jerusalem</option><option>Asia/Kabul</option><option>Asia/Kamchatka</option><option>Asia/Karachi</option><option>Asia/Kashgar</option><option>Asia/Kathmandu</option><option>Asia/Katmandu</option><option>Asia/Khandyga</option><option>Asia/Kolkata</option><option>Asia/Krasnoyarsk</option><option>Asia/Kuala_Lumpur</option><option>Asia/Kuching</option><option>Asia/Kuwait</option><option>Asia/Macao</option><option>Asia/Macau</option><option>Asia/Magadan</option><option>Asia/Makassar</option><option>Asia/Manila</option><option>Asia/Muscat</option><option>Asia/Nicosia</option><option>Asia/Novokuznetsk</option><option>Asia/Novosibirsk</option><option>Asia/Omsk</option><option>Asia/Oral</option><option>Asia/Phnom_Penh</option><option>Asia/Pontianak</option><option>Asia/Pyongyang</option><option>Asia/Qatar</option><option>Asia/Qostanay</option><option>Asia/Qyzylorda</option><option>Asia/Rangoon</option><option>Asia/Riyadh</option><option>Asia/Saigon</option><option>Asia/Sakhalin</option><option>Asia/Samarkand</option><option>Asia/Seoul</option><option>Asia/Shanghai</option><option>Asia/Singapore</option><option>Asia/Srednekolymsk</option><option>Asia/Taipei</option><option>Asia/Tashkent</option><option>Asia/Tbilisi</option><option>Asia/Tehran</option><option>Asia/Tel_Aviv</option><option>Asia/Thimbu</option><option>Asia/Thimphu</option><option>Asia/Tokyo</option><option>Asia/Tomsk</option><option>Asia/Ujung_Pandang</option><option>Asia/Ulaanbaatar</option><option>Asia/Ulan_Bator</option><option>Asia/Urumqi</option><option>Asia/Ust-Nera</option><option>Asia/Vientiane</option><option>Asia/Vladivostok</option><option>Asia/Yakutsk</option><option>Asia/Yangon</option><option>Asia/Yekaterinburg</option><option>Asia/Yerevan</option><option>Atlantic/Azores</option><option>Atlantic/Bermuda</option><option>Atlantic/Canary</option><option>Atlantic/Cape_Verde</option><option>Atlantic/Faeroe</option><option>Atlantic/Faroe</option><option>Atlantic/Jan_Mayen</option><option>Atlantic/Madeira</option><option>Atlantic/Reykjavik</option><option>Atlantic/South_Georgia</option><option>Atlantic/St_Helena</option><option>Atlantic/Stanley</option><option>Australia/ACT</option><option>Australia/Adelaide</option><option>Australia/Brisbane</option><option>Australia/Broken_Hill</option><option>Australia/Canberra</option><option>Australia/Currie</option><option>Australia/Darwin</option><option>Australia/Eucla</option><option>Australia/Hobart</option><option>Australia/LHI</option><option>Australia/Lindeman</option><option>Australia/Lord_Howe</option><option>Australia/Melbourne</option><option>Australia/NSW</option><option>Australia/North</option><option>Australia/Perth</option><option>Australia/Queensland</option><option>Australia/South</option><option>Australia/Sydney</option><option>Australia/Tasmania</option><option>Australia/Victoria</option><option>Australia/West</option><option>Australia/Yancowinna</option><option>Brazil/Acre</option><option>Brazil/DeNoronha</option><option>Brazil/East</option><option>Brazil/West</option><option>CET</option><option>CST6CDT</option><option>Canada/Atlantic</option><option>Canada/Central</option><option>Canada/Eastern</option><option>Canada/Mountain</option><option>Canada/Newfoundland</option><option>Canada/Pacific</option><option>Canada/Saskatchewan</option><option>Canada/Yukon</option><option>Chile/Continental</option><option>Chile/EasterIsland</option><option>Cuba</option><option>EET</option><option>EST</option><option>EST5EDT</option><option>Egypt</option><option>Eire</option><option>Etc/GMT</option><option>Etc/GMT+0</option><option>Etc/GMT+1</option><option>Etc/GMT+10</option><option>Etc/GMT+11</option><option>Etc/GMT+12</option><option>Etc/GMT+2</option><option>Etc/GMT+3</option><option>Etc/GMT+4</option><option>Etc/GMT+5</option><option>Etc/GMT+6</option><option>Etc/GMT+7</option><option>Etc/GMT+8</option><option>Etc/GMT+9</option><option>Etc/GMT-0</option><option>Etc/GMT-1</option><option>Etc/GMT-10</option><option>Etc/GMT-11</option><option>Etc/GMT-12</option><option>Etc/GMT-13</option><option>Etc/GMT-14</option><option>Etc/GMT-2</option><option>Etc/GMT-3</option><option>Etc/GMT-4</option><option>Etc/GMT-5</option><option>Etc/GMT-6</option><option>Etc/GMT-7</option><option>Etc/GMT-8</option><option>Etc/GMT-9</option><option>Etc/GMT0</option><option>Etc/Greenwich</option><option>Etc/UCT</option><option>Etc/UTC</option><option>Etc/Universal</option><option>Etc/Zulu</option><option>Europe/Amsterdam</option><option>Europe/Andorra</option><option>Europe/Astrakhan</option><option>Europe/Athens</option><option>Europe/Belfast</option><option>Europe/Belgrade</option><option>Europe/Berlin</option><option>Europe/Bratislava</option><option>Europe/Brussels</option><option>Europe/Bucharest</option><option>Europe/Budapest</option><option>Europe/Busingen</option><option>Europe/Chisinau</option><option>Europe/Copenhagen</option><option>Europe/Dublin</option><option>Europe/Gibraltar</option><option>Europe/Guernsey</option><option>Europe/Helsinki</option><option>Europe/Isle_of_Man</option><option>Europe/Istanbul</option><option>Europe/Jersey</option><option>Europe/Kaliningrad</option><option>Europe/Kiev</option><option>Europe/Kirov</option><option>Europe/Lisbon</option><option>Europe/Ljubljana</option><option>Europe/London</option><option>Europe/Luxembourg</option><option>Europe/Madrid</option><option>Europe/Malta</option><option>Europe/Mariehamn</option><option>Europe/Minsk</option><option>Europe/Monaco</option><option>Europe/Moscow</option><option>Europe/Nicosia</option><option>Europe/Oslo</option><option>Europe/Paris</option><option>Europe/Podgorica</option><option>Europe/Prague</option><option>Europe/Riga</option><option>Europe/Rome</option><option>Europe/Samara</option><option>Europe/San_Marino</option><option>Europe/Sarajevo</option><option>Europe/Saratov</option><option>Europe/Simferopol</option><option>Europe/Skopje</option><option>Europe/Sofia</option><option>Europe/Stockholm</option><option>Europe/Tallinn</option><option>Europe/Tirane</option><option>Europe/Tiraspol</option><option>Europe/Ulyanovsk</option><option>Europe/Uzhgorod</option><option>Europe/Vaduz</option><option>Europe/Vatican</option><option>Europe/Vienna</option><option>Europe/Vilnius</option><option>Europe/Volgograd</option><option>Europe/Warsaw</option><option>Europe/Zagreb</option><option>Europe/Zaporozhye</option><option>Europe/Zurich</option><option>GB</option><option>GB-Eire</option><option>GMT</option><option>GMT+0</option><option>GMT-0</option><option>GMT0</option><option>Greenwich</option><option>HST</option><option>Hongkong</option><option>Iceland</option><option>Indian/Antananarivo</option><option>Indian/Chagos</option><option>Indian/Christmas</option><option>Indian/Cocos</option><option>Indian/Comoro</option><option>Indian/Kerguelen</option><option>Indian/Mahe</option><option>Indian/Maldives</option><option>Indian/Mauritius</option><option>Indian/Mayotte</option><option>Indian/Reunion</option><option>Iran</option><option>Israel</option><option>Jamaica</option><option>Japan</option><option>Kwajalein</option><option>Libya</option><option>MET</option><option>MST</option><option>MST7MDT</option><option>Mexico/BajaNorte</option><option>Mexico/BajaSur</option><option>Mexico/General</option><option>NZ</option><option>NZ-CHAT</option><option>Navajo</option><option>PRC</option><option>PST8PDT</option><option>Pacific/Apia</option><option>Pacific/Auckland</option><option>Pacific/Bougainville</option><option>Pacific/Chatham</option><option>Pacific/Chuuk</option><option>Pacific/Easter</option><option>Pacific/Efate</option><option>Pacific/Enderbury</option><option>Pacific/Fakaofo</option><option>Pacific/Fiji</option><option>Pacific/Funafuti</option><option>Pacific/Galapagos</option><option>Pacific/Gambier</option><option>Pacific/Guadalcanal</option><option>Pacific/Guam</option><option>Pacific/Honolulu</option><option>Pacific/Johnston</option><option>Pacific/Kiritimati</option><option>Pacific/Kosrae</option><option>Pacific/Kwajalein</option><option>Pacific/Majuro</option><option>Pacific/Marquesas</option><option>Pacific/Midway</option><option>Pacific/Nauru</option><option>Pacific/Niue</option><option>Pacific/Norfolk</option><option>Pacific/Noumea</option><option>Pacific/Pago_Pago</option><option>Pacific/Palau</option><option>Pacific/Pitcairn</option><option>Pacific/Pohnpei</option><option>Pacific/Ponape</option><option>Pacific/Port_Moresby</option><option>Pacific/Rarotonga</option><option>Pacific/Saipan</option><option>Pacific/Samoa</option><option>Pacific/Tahiti</option><option>Pacific/Tarawa</option><option>Pacific/Tongatapu</option><option>Pacific/Truk</option><option>Pacific/Wake</option><option>Pacific/Wallis</option><option>Pacific/Yap</option><option>Poland</option><option>Portugal</option><option>ROC</option><option>ROK</option><option>Singapore</option><option>Turkey</option><option>UCT</option><option>US/Alaska</option><option>US/Aleutian</option><option>US/Arizona</option><option>US/Central</option><option>US/East-Indiana</option><option>US/Eastern</option><option>US/Hawaii</option><option>US/Indiana-Starke</option><option>US/Michigan</option><option>US/Mountain</option><option>US/Pacific</option><option>US/Pacific-New</option><option>US/Samoa</option><option>UTC</option><option>Universal</option><option>W-SU</option><option>WET</option><option>Zulu</option></select>
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="start-local">Local Time:</label>
+						<input class="form-control" id="start-local" type="text" placeholder="Start Date (Local Time)" readonly="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="start-zonetime">Timezone Time:</label>
+						<input class="form-control" id="start-zonetime" type="text" placeholder="Start Date (Timezone Time)" readonly="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label>UTC Timestamp:</label>
+						<input class="form-control" id="start" name="start" type="number" placeholder="Start Date (UTC timestamp)" readonly="">
+					</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="end-date">
+				<div class="row" id="end-date">
+					<div class="col-md-12">
+						<p>This is the time when the competition will end. Challenges will automatically
+							close and users won't be able to submit answers.</p>
+						<sub class="text-muted text-right mb-3">* All time fields required</sub>
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="end-month">Month:</label>
+						<input class="form-control end-date" id="end-month" min="0" max="12" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="end-day">Day:</label>
+						<input class="form-control end-date" id="end-day" min="0" max="31" type="number">
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="end-year">Year:</label>
+						<input class="form-control end-date" id="end-year" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="end-hour">Hour:</label>
+						<input class="form-control end-date" id="end-hour" min="0" max="23" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="end-minute">Minute:</label>
+						<input class="form-control end-date" id="end-minute" min="0" max="59" type="number">
+					</div>
+
+					<div class="form-check">
+						<label>
+							<input id="view_after_ctf" name="view_after_ctf" type="checkbox" checked="">
+							Allow challenges to be viewed (no submissions are recorded) after the CTF End Time.
+						</label>
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="end-timezone">Timezone:</label>
+						<select class="form-control custom-select end-date" id="end-timezone">
+						<option>America/Denver</option><option>Africa/Abidjan</option><option>Africa/Accra</option><option>Africa/Addis_Ababa</option><option>Africa/Algiers</option><option>Africa/Asmara</option><option>Africa/Asmera</option><option>Africa/Bamako</option><option>Africa/Bangui</option><option>Africa/Banjul</option><option>Africa/Bissau</option><option>Africa/Blantyre</option><option>Africa/Brazzaville</option><option>Africa/Bujumbura</option><option>Africa/Cairo</option><option>Africa/Casablanca</option><option>Africa/Ceuta</option><option>Africa/Conakry</option><option>Africa/Dakar</option><option>Africa/Dar_es_Salaam</option><option>Africa/Djibouti</option><option>Africa/Douala</option><option>Africa/El_Aaiun</option><option>Africa/Freetown</option><option>Africa/Gaborone</option><option>Africa/Harare</option><option>Africa/Johannesburg</option><option>Africa/Juba</option><option>Africa/Kampala</option><option>Africa/Khartoum</option><option>Africa/Kigali</option><option>Africa/Kinshasa</option><option>Africa/Lagos</option><option>Africa/Libreville</option><option>Africa/Lome</option><option>Africa/Luanda</option><option>Africa/Lubumbashi</option><option>Africa/Lusaka</option><option>Africa/Malabo</option><option>Africa/Maputo</option><option>Africa/Maseru</option><option>Africa/Mbabane</option><option>Africa/Mogadishu</option><option>Africa/Monrovia</option><option>Africa/Nairobi</option><option>Africa/Ndjamena</option><option>Africa/Niamey</option><option>Africa/Nouakchott</option><option>Africa/Ouagadougou</option><option>Africa/Porto-Novo</option><option>Africa/Sao_Tome</option><option>Africa/Timbuktu</option><option>Africa/Tripoli</option><option>Africa/Tunis</option><option>Africa/Windhoek</option><option>America/Adak</option><option>America/Anchorage</option><option>America/Anguilla</option><option>America/Antigua</option><option>America/Araguaina</option><option>America/Argentina/Buenos_Aires</option><option>America/Argentina/Catamarca</option><option>America/Argentina/ComodRivadavia</option><option>America/Argentina/Cordoba</option><option>America/Argentina/Jujuy</option><option>America/Argentina/La_Rioja</option><option>America/Argentina/Mendoza</option><option>America/Argentina/Rio_Gallegos</option><option>America/Argentina/Salta</option><option>America/Argentina/San_Juan</option><option>America/Argentina/San_Luis</option><option>America/Argentina/Tucuman</option><option>America/Argentina/Ushuaia</option><option>America/Aruba</option><option>America/Asuncion</option><option>America/Atikokan</option><option>America/Atka</option><option>America/Bahia</option><option>America/Bahia_Banderas</option><option>America/Barbados</option><option>America/Belem</option><option>America/Belize</option><option>America/Blanc-Sablon</option><option>America/Boa_Vista</option><option>America/Bogota</option><option>America/Boise</option><option>America/Buenos_Aires</option><option>America/Cambridge_Bay</option><option>America/Campo_Grande</option><option>America/Cancun</option><option>America/Caracas</option><option>America/Catamarca</option><option>America/Cayenne</option><option>America/Cayman</option><option>America/Chicago</option><option>America/Chihuahua</option><option>America/Coral_Harbour</option><option>America/Cordoba</option><option>America/Costa_Rica</option><option>America/Creston</option><option>America/Cuiaba</option><option>America/Curacao</option><option>America/Danmarkshavn</option><option>America/Dawson</option><option>America/Dawson_Creek</option><option>America/Denver</option><option>America/Detroit</option><option>America/Dominica</option><option>America/Edmonton</option><option>America/Eirunepe</option><option>America/El_Salvador</option><option>America/Ensenada</option><option>America/Fort_Nelson</option><option>America/Fort_Wayne</option><option>America/Fortaleza</option><option>America/Glace_Bay</option><option>America/Godthab</option><option>America/Goose_Bay</option><option>America/Grand_Turk</option><option>America/Grenada</option><option>America/Guadeloupe</option><option>America/Guatemala</option><option>America/Guayaquil</option><option>America/Guyana</option><option>America/Halifax</option><option>America/Havana</option><option>America/Hermosillo</option><option>America/Indiana/Indianapolis</option><option>America/Indiana/Knox</option><option>America/Indiana/Marengo</option><option>America/Indiana/Petersburg</option><option>America/Indiana/Tell_City</option><option>America/Indiana/Vevay</option><option>America/Indiana/Vincennes</option><option>America/Indiana/Winamac</option><option>America/Indianapolis</option><option>America/Inuvik</option><option>America/Iqaluit</option><option>America/Jamaica</option><option>America/Jujuy</option><option>America/Juneau</option><option>America/Kentucky/Louisville</option><option>America/Kentucky/Monticello</option><option>America/Knox_IN</option><option>America/Kralendijk</option><option>America/La_Paz</option><option>America/Lima</option><option>America/Los_Angeles</option><option>America/Louisville</option><option>America/Lower_Princes</option><option>America/Maceio</option><option>America/Managua</option><option>America/Manaus</option><option>America/Marigot</option><option>America/Martinique</option><option>America/Matamoros</option><option>America/Mazatlan</option><option>America/Mendoza</option><option>America/Menominee</option><option>America/Merida</option><option>America/Metlakatla</option><option>America/Mexico_City</option><option>America/Miquelon</option><option>America/Moncton</option><option>America/Monterrey</option><option>America/Montevideo</option><option>America/Montreal</option><option>America/Montserrat</option><option>America/Nassau</option><option>America/New_York</option><option>America/Nipigon</option><option>America/Nome</option><option>America/Noronha</option><option>America/North_Dakota/Beulah</option><option>America/North_Dakota/Center</option><option>America/North_Dakota/New_Salem</option><option>America/Nuuk</option><option>America/Ojinaga</option><option>America/Panama</option><option>America/Pangnirtung</option><option>America/Paramaribo</option><option>America/Phoenix</option><option>America/Port-au-Prince</option><option>America/Port_of_Spain</option><option>America/Porto_Acre</option><option>America/Porto_Velho</option><option>America/Puerto_Rico</option><option>America/Punta_Arenas</option><option>America/Rainy_River</option><option>America/Rankin_Inlet</option><option>America/Recife</option><option>America/Regina</option><option>America/Resolute</option><option>America/Rio_Branco</option><option>America/Rosario</option><option>America/Santa_Isabel</option><option>America/Santarem</option><option>America/Santiago</option><option>America/Santo_Domingo</option><option>America/Sao_Paulo</option><option>America/Scoresbysund</option><option>America/Shiprock</option><option>America/Sitka</option><option>America/St_Barthelemy</option><option>America/St_Johns</option><option>America/St_Kitts</option><option>America/St_Lucia</option><option>America/St_Thomas</option><option>America/St_Vincent</option><option>America/Swift_Current</option><option>America/Tegucigalpa</option><option>America/Thule</option><option>America/Thunder_Bay</option><option>America/Tijuana</option><option>America/Toronto</option><option>America/Tortola</option><option>America/Vancouver</option><option>America/Virgin</option><option>America/Whitehorse</option><option>America/Winnipeg</option><option>America/Yakutat</option><option>America/Yellowknife</option><option>Antarctica/Casey</option><option>Antarctica/Davis</option><option>Antarctica/DumontDUrville</option><option>Antarctica/Macquarie</option><option>Antarctica/Mawson</option><option>Antarctica/McMurdo</option><option>Antarctica/Palmer</option><option>Antarctica/Rothera</option><option>Antarctica/South_Pole</option><option>Antarctica/Syowa</option><option>Antarctica/Troll</option><option>Antarctica/Vostok</option><option>Arctic/Longyearbyen</option><option>Asia/Aden</option><option>Asia/Almaty</option><option>Asia/Amman</option><option>Asia/Anadyr</option><option>Asia/Aqtau</option><option>Asia/Aqtobe</option><option>Asia/Ashgabat</option><option>Asia/Ashkhabad</option><option>Asia/Atyrau</option><option>Asia/Baghdad</option><option>Asia/Bahrain</option><option>Asia/Baku</option><option>Asia/Bangkok</option><option>Asia/Barnaul</option><option>Asia/Beirut</option><option>Asia/Bishkek</option><option>Asia/Brunei</option><option>Asia/Calcutta</option><option>Asia/Chita</option><option>Asia/Choibalsan</option><option>Asia/Chongqing</option><option>Asia/Chungking</option><option>Asia/Colombo</option><option>Asia/Dacca</option><option>Asia/Damascus</option><option>Asia/Dhaka</option><option>Asia/Dili</option><option>Asia/Dubai</option><option>Asia/Dushanbe</option><option>Asia/Famagusta</option><option>Asia/Gaza</option><option>Asia/Harbin</option><option>Asia/Hebron</option><option>Asia/Ho_Chi_Minh</option><option>Asia/Hong_Kong</option><option>Asia/Hovd</option><option>Asia/Irkutsk</option><option>Asia/Istanbul</option><option>Asia/Jakarta</option><option>Asia/Jayapura</option><option>Asia/Jerusalem</option><option>Asia/Kabul</option><option>Asia/Kamchatka</option><option>Asia/Karachi</option><option>Asia/Kashgar</option><option>Asia/Kathmandu</option><option>Asia/Katmandu</option><option>Asia/Khandyga</option><option>Asia/Kolkata</option><option>Asia/Krasnoyarsk</option><option>Asia/Kuala_Lumpur</option><option>Asia/Kuching</option><option>Asia/Kuwait</option><option>Asia/Macao</option><option>Asia/Macau</option><option>Asia/Magadan</option><option>Asia/Makassar</option><option>Asia/Manila</option><option>Asia/Muscat</option><option>Asia/Nicosia</option><option>Asia/Novokuznetsk</option><option>Asia/Novosibirsk</option><option>Asia/Omsk</option><option>Asia/Oral</option><option>Asia/Phnom_Penh</option><option>Asia/Pontianak</option><option>Asia/Pyongyang</option><option>Asia/Qatar</option><option>Asia/Qostanay</option><option>Asia/Qyzylorda</option><option>Asia/Rangoon</option><option>Asia/Riyadh</option><option>Asia/Saigon</option><option>Asia/Sakhalin</option><option>Asia/Samarkand</option><option>Asia/Seoul</option><option>Asia/Shanghai</option><option>Asia/Singapore</option><option>Asia/Srednekolymsk</option><option>Asia/Taipei</option><option>Asia/Tashkent</option><option>Asia/Tbilisi</option><option>Asia/Tehran</option><option>Asia/Tel_Aviv</option><option>Asia/Thimbu</option><option>Asia/Thimphu</option><option>Asia/Tokyo</option><option>Asia/Tomsk</option><option>Asia/Ujung_Pandang</option><option>Asia/Ulaanbaatar</option><option>Asia/Ulan_Bator</option><option>Asia/Urumqi</option><option>Asia/Ust-Nera</option><option>Asia/Vientiane</option><option>Asia/Vladivostok</option><option>Asia/Yakutsk</option><option>Asia/Yangon</option><option>Asia/Yekaterinburg</option><option>Asia/Yerevan</option><option>Atlantic/Azores</option><option>Atlantic/Bermuda</option><option>Atlantic/Canary</option><option>Atlantic/Cape_Verde</option><option>Atlantic/Faeroe</option><option>Atlantic/Faroe</option><option>Atlantic/Jan_Mayen</option><option>Atlantic/Madeira</option><option>Atlantic/Reykjavik</option><option>Atlantic/South_Georgia</option><option>Atlantic/St_Helena</option><option>Atlantic/Stanley</option><option>Australia/ACT</option><option>Australia/Adelaide</option><option>Australia/Brisbane</option><option>Australia/Broken_Hill</option><option>Australia/Canberra</option><option>Australia/Currie</option><option>Australia/Darwin</option><option>Australia/Eucla</option><option>Australia/Hobart</option><option>Australia/LHI</option><option>Australia/Lindeman</option><option>Australia/Lord_Howe</option><option>Australia/Melbourne</option><option>Australia/NSW</option><option>Australia/North</option><option>Australia/Perth</option><option>Australia/Queensland</option><option>Australia/South</option><option>Australia/Sydney</option><option>Australia/Tasmania</option><option>Australia/Victoria</option><option>Australia/West</option><option>Australia/Yancowinna</option><option>Brazil/Acre</option><option>Brazil/DeNoronha</option><option>Brazil/East</option><option>Brazil/West</option><option>CET</option><option>CST6CDT</option><option>Canada/Atlantic</option><option>Canada/Central</option><option>Canada/Eastern</option><option>Canada/Mountain</option><option>Canada/Newfoundland</option><option>Canada/Pacific</option><option>Canada/Saskatchewan</option><option>Canada/Yukon</option><option>Chile/Continental</option><option>Chile/EasterIsland</option><option>Cuba</option><option>EET</option><option>EST</option><option>EST5EDT</option><option>Egypt</option><option>Eire</option><option>Etc/GMT</option><option>Etc/GMT+0</option><option>Etc/GMT+1</option><option>Etc/GMT+10</option><option>Etc/GMT+11</option><option>Etc/GMT+12</option><option>Etc/GMT+2</option><option>Etc/GMT+3</option><option>Etc/GMT+4</option><option>Etc/GMT+5</option><option>Etc/GMT+6</option><option>Etc/GMT+7</option><option>Etc/GMT+8</option><option>Etc/GMT+9</option><option>Etc/GMT-0</option><option>Etc/GMT-1</option><option>Etc/GMT-10</option><option>Etc/GMT-11</option><option>Etc/GMT-12</option><option>Etc/GMT-13</option><option>Etc/GMT-14</option><option>Etc/GMT-2</option><option>Etc/GMT-3</option><option>Etc/GMT-4</option><option>Etc/GMT-5</option><option>Etc/GMT-6</option><option>Etc/GMT-7</option><option>Etc/GMT-8</option><option>Etc/GMT-9</option><option>Etc/GMT0</option><option>Etc/Greenwich</option><option>Etc/UCT</option><option>Etc/UTC</option><option>Etc/Universal</option><option>Etc/Zulu</option><option>Europe/Amsterdam</option><option>Europe/Andorra</option><option>Europe/Astrakhan</option><option>Europe/Athens</option><option>Europe/Belfast</option><option>Europe/Belgrade</option><option>Europe/Berlin</option><option>Europe/Bratislava</option><option>Europe/Brussels</option><option>Europe/Bucharest</option><option>Europe/Budapest</option><option>Europe/Busingen</option><option>Europe/Chisinau</option><option>Europe/Copenhagen</option><option>Europe/Dublin</option><option>Europe/Gibraltar</option><option>Europe/Guernsey</option><option>Europe/Helsinki</option><option>Europe/Isle_of_Man</option><option>Europe/Istanbul</option><option>Europe/Jersey</option><option>Europe/Kaliningrad</option><option>Europe/Kiev</option><option>Europe/Kirov</option><option>Europe/Lisbon</option><option>Europe/Ljubljana</option><option>Europe/London</option><option>Europe/Luxembourg</option><option>Europe/Madrid</option><option>Europe/Malta</option><option>Europe/Mariehamn</option><option>Europe/Minsk</option><option>Europe/Monaco</option><option>Europe/Moscow</option><option>Europe/Nicosia</option><option>Europe/Oslo</option><option>Europe/Paris</option><option>Europe/Podgorica</option><option>Europe/Prague</option><option>Europe/Riga</option><option>Europe/Rome</option><option>Europe/Samara</option><option>Europe/San_Marino</option><option>Europe/Sarajevo</option><option>Europe/Saratov</option><option>Europe/Simferopol</option><option>Europe/Skopje</option><option>Europe/Sofia</option><option>Europe/Stockholm</option><option>Europe/Tallinn</option><option>Europe/Tirane</option><option>Europe/Tiraspol</option><option>Europe/Ulyanovsk</option><option>Europe/Uzhgorod</option><option>Europe/Vaduz</option><option>Europe/Vatican</option><option>Europe/Vienna</option><option>Europe/Vilnius</option><option>Europe/Volgograd</option><option>Europe/Warsaw</option><option>Europe/Zagreb</option><option>Europe/Zaporozhye</option><option>Europe/Zurich</option><option>GB</option><option>GB-Eire</option><option>GMT</option><option>GMT+0</option><option>GMT-0</option><option>GMT0</option><option>Greenwich</option><option>HST</option><option>Hongkong</option><option>Iceland</option><option>Indian/Antananarivo</option><option>Indian/Chagos</option><option>Indian/Christmas</option><option>Indian/Cocos</option><option>Indian/Comoro</option><option>Indian/Kerguelen</option><option>Indian/Mahe</option><option>Indian/Maldives</option><option>Indian/Mauritius</option><option>Indian/Mayotte</option><option>Indian/Reunion</option><option>Iran</option><option>Israel</option><option>Jamaica</option><option>Japan</option><option>Kwajalein</option><option>Libya</option><option>MET</option><option>MST</option><option>MST7MDT</option><option>Mexico/BajaNorte</option><option>Mexico/BajaSur</option><option>Mexico/General</option><option>NZ</option><option>NZ-CHAT</option><option>Navajo</option><option>PRC</option><option>PST8PDT</option><option>Pacific/Apia</option><option>Pacific/Auckland</option><option>Pacific/Bougainville</option><option>Pacific/Chatham</option><option>Pacific/Chuuk</option><option>Pacific/Easter</option><option>Pacific/Efate</option><option>Pacific/Enderbury</option><option>Pacific/Fakaofo</option><option>Pacific/Fiji</option><option>Pacific/Funafuti</option><option>Pacific/Galapagos</option><option>Pacific/Gambier</option><option>Pacific/Guadalcanal</option><option>Pacific/Guam</option><option>Pacific/Honolulu</option><option>Pacific/Johnston</option><option>Pacific/Kiritimati</option><option>Pacific/Kosrae</option><option>Pacific/Kwajalein</option><option>Pacific/Majuro</option><option>Pacific/Marquesas</option><option>Pacific/Midway</option><option>Pacific/Nauru</option><option>Pacific/Niue</option><option>Pacific/Norfolk</option><option>Pacific/Noumea</option><option>Pacific/Pago_Pago</option><option>Pacific/Palau</option><option>Pacific/Pitcairn</option><option>Pacific/Pohnpei</option><option>Pacific/Ponape</option><option>Pacific/Port_Moresby</option><option>Pacific/Rarotonga</option><option>Pacific/Saipan</option><option>Pacific/Samoa</option><option>Pacific/Tahiti</option><option>Pacific/Tarawa</option><option>Pacific/Tongatapu</option><option>Pacific/Truk</option><option>Pacific/Wake</option><option>Pacific/Wallis</option><option>Pacific/Yap</option><option>Poland</option><option>Portugal</option><option>ROC</option><option>ROK</option><option>Singapore</option><option>Turkey</option><option>UCT</option><option>US/Alaska</option><option>US/Aleutian</option><option>US/Arizona</option><option>US/Central</option><option>US/East-Indiana</option><option>US/Eastern</option><option>US/Hawaii</option><option>US/Indiana-Starke</option><option>US/Michigan</option><option>US/Mountain</option><option>US/Pacific</option><option>US/Pacific-New</option><option>US/Samoa</option><option>UTC</option><option>Universal</option><option>W-SU</option><option>WET</option><option>Zulu</option></select>
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="end-local">Local Time:</label>
+						<input class="form-control" id="end-local" type="text" placeholder="End Date (Local Time)" readonly="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="end-zonetime">Timezone Time:</label>
+						<input class="form-control" id="end-zonetime" type="text" placeholder="End Date (Timezone Time)" readonly="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="end">UTC Timestamp:</label>
+						<input class="form-control" id="end" name="end" type="number" placeholder="End Date (UTC timestamp)" value="1666911600" readonly="">
+					</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="freeze-date">
+				<div class="row" id="freeze-date">
+					<div class="col-md-12">
+						<p>Freeze time specifies the timestamp that the competition will be frozen to.
+							All solves before the freeze time will be shown, but new solves won't be shown to
+							users. </p>
+						<sub class="text-muted text-right mb-3">* All time fields required</sub>
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="freeze-month">Month:</label>
+						<input class="form-control freeze-date" id="freeze-month" min="0" max="12" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="freeze-day">Day:</label>
+						<input class="form-control freeze-date" id="freeze-day" min="0" max="31" type="number">
+					</div>
+
+					<div class="form-group col-md-4">
+						<label for="freeze-year">Year:</label>
+						<input class="form-control freeze-date" id="freeze-year" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="freeze-hour">Hour:</label>
+						<input class="form-control freeze-date" id="freeze-hour" min="0" max="23" type="number">
+					</div>
+
+					<div class="form-group col-md-2">
+						<label for="freeze-minute">Minute:</label>
+						<input class="form-control freeze-date" id="freeze-minute" min="0" max="59" type="number">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="freeze-timezone">Timezone:</label>
+						<select class="form-control custom-select freeze-date" id="freeze-timezone">
+						<option>America/Denver</option><option>Africa/Abidjan</option><option>Africa/Accra</option><option>Africa/Addis_Ababa</option><option>Africa/Algiers</option><option>Africa/Asmara</option><option>Africa/Asmera</option><option>Africa/Bamako</option><option>Africa/Bangui</option><option>Africa/Banjul</option><option>Africa/Bissau</option><option>Africa/Blantyre</option><option>Africa/Brazzaville</option><option>Africa/Bujumbura</option><option>Africa/Cairo</option><option>Africa/Casablanca</option><option>Africa/Ceuta</option><option>Africa/Conakry</option><option>Africa/Dakar</option><option>Africa/Dar_es_Salaam</option><option>Africa/Djibouti</option><option>Africa/Douala</option><option>Africa/El_Aaiun</option><option>Africa/Freetown</option><option>Africa/Gaborone</option><option>Africa/Harare</option><option>Africa/Johannesburg</option><option>Africa/Juba</option><option>Africa/Kampala</option><option>Africa/Khartoum</option><option>Africa/Kigali</option><option>Africa/Kinshasa</option><option>Africa/Lagos</option><option>Africa/Libreville</option><option>Africa/Lome</option><option>Africa/Luanda</option><option>Africa/Lubumbashi</option><option>Africa/Lusaka</option><option>Africa/Malabo</option><option>Africa/Maputo</option><option>Africa/Maseru</option><option>Africa/Mbabane</option><option>Africa/Mogadishu</option><option>Africa/Monrovia</option><option>Africa/Nairobi</option><option>Africa/Ndjamena</option><option>Africa/Niamey</option><option>Africa/Nouakchott</option><option>Africa/Ouagadougou</option><option>Africa/Porto-Novo</option><option>Africa/Sao_Tome</option><option>Africa/Timbuktu</option><option>Africa/Tripoli</option><option>Africa/Tunis</option><option>Africa/Windhoek</option><option>America/Adak</option><option>America/Anchorage</option><option>America/Anguilla</option><option>America/Antigua</option><option>America/Araguaina</option><option>America/Argentina/Buenos_Aires</option><option>America/Argentina/Catamarca</option><option>America/Argentina/ComodRivadavia</option><option>America/Argentina/Cordoba</option><option>America/Argentina/Jujuy</option><option>America/Argentina/La_Rioja</option><option>America/Argentina/Mendoza</option><option>America/Argentina/Rio_Gallegos</option><option>America/Argentina/Salta</option><option>America/Argentina/San_Juan</option><option>America/Argentina/San_Luis</option><option>America/Argentina/Tucuman</option><option>America/Argentina/Ushuaia</option><option>America/Aruba</option><option>America/Asuncion</option><option>America/Atikokan</option><option>America/Atka</option><option>America/Bahia</option><option>America/Bahia_Banderas</option><option>America/Barbados</option><option>America/Belem</option><option>America/Belize</option><option>America/Blanc-Sablon</option><option>America/Boa_Vista</option><option>America/Bogota</option><option>America/Boise</option><option>America/Buenos_Aires</option><option>America/Cambridge_Bay</option><option>America/Campo_Grande</option><option>America/Cancun</option><option>America/Caracas</option><option>America/Catamarca</option><option>America/Cayenne</option><option>America/Cayman</option><option>America/Chicago</option><option>America/Chihuahua</option><option>America/Coral_Harbour</option><option>America/Cordoba</option><option>America/Costa_Rica</option><option>America/Creston</option><option>America/Cuiaba</option><option>America/Curacao</option><option>America/Danmarkshavn</option><option>America/Dawson</option><option>America/Dawson_Creek</option><option>America/Denver</option><option>America/Detroit</option><option>America/Dominica</option><option>America/Edmonton</option><option>America/Eirunepe</option><option>America/El_Salvador</option><option>America/Ensenada</option><option>America/Fort_Nelson</option><option>America/Fort_Wayne</option><option>America/Fortaleza</option><option>America/Glace_Bay</option><option>America/Godthab</option><option>America/Goose_Bay</option><option>America/Grand_Turk</option><option>America/Grenada</option><option>America/Guadeloupe</option><option>America/Guatemala</option><option>America/Guayaquil</option><option>America/Guyana</option><option>America/Halifax</option><option>America/Havana</option><option>America/Hermosillo</option><option>America/Indiana/Indianapolis</option><option>America/Indiana/Knox</option><option>America/Indiana/Marengo</option><option>America/Indiana/Petersburg</option><option>America/Indiana/Tell_City</option><option>America/Indiana/Vevay</option><option>America/Indiana/Vincennes</option><option>America/Indiana/Winamac</option><option>America/Indianapolis</option><option>America/Inuvik</option><option>America/Iqaluit</option><option>America/Jamaica</option><option>America/Jujuy</option><option>America/Juneau</option><option>America/Kentucky/Louisville</option><option>America/Kentucky/Monticello</option><option>America/Knox_IN</option><option>America/Kralendijk</option><option>America/La_Paz</option><option>America/Lima</option><option>America/Los_Angeles</option><option>America/Louisville</option><option>America/Lower_Princes</option><option>America/Maceio</option><option>America/Managua</option><option>America/Manaus</option><option>America/Marigot</option><option>America/Martinique</option><option>America/Matamoros</option><option>America/Mazatlan</option><option>America/Mendoza</option><option>America/Menominee</option><option>America/Merida</option><option>America/Metlakatla</option><option>America/Mexico_City</option><option>America/Miquelon</option><option>America/Moncton</option><option>America/Monterrey</option><option>America/Montevideo</option><option>America/Montreal</option><option>America/Montserrat</option><option>America/Nassau</option><option>America/New_York</option><option>America/Nipigon</option><option>America/Nome</option><option>America/Noronha</option><option>America/North_Dakota/Beulah</option><option>America/North_Dakota/Center</option><option>America/North_Dakota/New_Salem</option><option>America/Nuuk</option><option>America/Ojinaga</option><option>America/Panama</option><option>America/Pangnirtung</option><option>America/Paramaribo</option><option>America/Phoenix</option><option>America/Port-au-Prince</option><option>America/Port_of_Spain</option><option>America/Porto_Acre</option><option>America/Porto_Velho</option><option>America/Puerto_Rico</option><option>America/Punta_Arenas</option><option>America/Rainy_River</option><option>America/Rankin_Inlet</option><option>America/Recife</option><option>America/Regina</option><option>America/Resolute</option><option>America/Rio_Branco</option><option>America/Rosario</option><option>America/Santa_Isabel</option><option>America/Santarem</option><option>America/Santiago</option><option>America/Santo_Domingo</option><option>America/Sao_Paulo</option><option>America/Scoresbysund</option><option>America/Shiprock</option><option>America/Sitka</option><option>America/St_Barthelemy</option><option>America/St_Johns</option><option>America/St_Kitts</option><option>America/St_Lucia</option><option>America/St_Thomas</option><option>America/St_Vincent</option><option>America/Swift_Current</option><option>America/Tegucigalpa</option><option>America/Thule</option><option>America/Thunder_Bay</option><option>America/Tijuana</option><option>America/Toronto</option><option>America/Tortola</option><option>America/Vancouver</option><option>America/Virgin</option><option>America/Whitehorse</option><option>America/Winnipeg</option><option>America/Yakutat</option><option>America/Yellowknife</option><option>Antarctica/Casey</option><option>Antarctica/Davis</option><option>Antarctica/DumontDUrville</option><option>Antarctica/Macquarie</option><option>Antarctica/Mawson</option><option>Antarctica/McMurdo</option><option>Antarctica/Palmer</option><option>Antarctica/Rothera</option><option>Antarctica/South_Pole</option><option>Antarctica/Syowa</option><option>Antarctica/Troll</option><option>Antarctica/Vostok</option><option>Arctic/Longyearbyen</option><option>Asia/Aden</option><option>Asia/Almaty</option><option>Asia/Amman</option><option>Asia/Anadyr</option><option>Asia/Aqtau</option><option>Asia/Aqtobe</option><option>Asia/Ashgabat</option><option>Asia/Ashkhabad</option><option>Asia/Atyrau</option><option>Asia/Baghdad</option><option>Asia/Bahrain</option><option>Asia/Baku</option><option>Asia/Bangkok</option><option>Asia/Barnaul</option><option>Asia/Beirut</option><option>Asia/Bishkek</option><option>Asia/Brunei</option><option>Asia/Calcutta</option><option>Asia/Chita</option><option>Asia/Choibalsan</option><option>Asia/Chongqing</option><option>Asia/Chungking</option><option>Asia/Colombo</option><option>Asia/Dacca</option><option>Asia/Damascus</option><option>Asia/Dhaka</option><option>Asia/Dili</option><option>Asia/Dubai</option><option>Asia/Dushanbe</option><option>Asia/Famagusta</option><option>Asia/Gaza</option><option>Asia/Harbin</option><option>Asia/Hebron</option><option>Asia/Ho_Chi_Minh</option><option>Asia/Hong_Kong</option><option>Asia/Hovd</option><option>Asia/Irkutsk</option><option>Asia/Istanbul</option><option>Asia/Jakarta</option><option>Asia/Jayapura</option><option>Asia/Jerusalem</option><option>Asia/Kabul</option><option>Asia/Kamchatka</option><option>Asia/Karachi</option><option>Asia/Kashgar</option><option>Asia/Kathmandu</option><option>Asia/Katmandu</option><option>Asia/Khandyga</option><option>Asia/Kolkata</option><option>Asia/Krasnoyarsk</option><option>Asia/Kuala_Lumpur</option><option>Asia/Kuching</option><option>Asia/Kuwait</option><option>Asia/Macao</option><option>Asia/Macau</option><option>Asia/Magadan</option><option>Asia/Makassar</option><option>Asia/Manila</option><option>Asia/Muscat</option><option>Asia/Nicosia</option><option>Asia/Novokuznetsk</option><option>Asia/Novosibirsk</option><option>Asia/Omsk</option><option>Asia/Oral</option><option>Asia/Phnom_Penh</option><option>Asia/Pontianak</option><option>Asia/Pyongyang</option><option>Asia/Qatar</option><option>Asia/Qostanay</option><option>Asia/Qyzylorda</option><option>Asia/Rangoon</option><option>Asia/Riyadh</option><option>Asia/Saigon</option><option>Asia/Sakhalin</option><option>Asia/Samarkand</option><option>Asia/Seoul</option><option>Asia/Shanghai</option><option>Asia/Singapore</option><option>Asia/Srednekolymsk</option><option>Asia/Taipei</option><option>Asia/Tashkent</option><option>Asia/Tbilisi</option><option>Asia/Tehran</option><option>Asia/Tel_Aviv</option><option>Asia/Thimbu</option><option>Asia/Thimphu</option><option>Asia/Tokyo</option><option>Asia/Tomsk</option><option>Asia/Ujung_Pandang</option><option>Asia/Ulaanbaatar</option><option>Asia/Ulan_Bator</option><option>Asia/Urumqi</option><option>Asia/Ust-Nera</option><option>Asia/Vientiane</option><option>Asia/Vladivostok</option><option>Asia/Yakutsk</option><option>Asia/Yangon</option><option>Asia/Yekaterinburg</option><option>Asia/Yerevan</option><option>Atlantic/Azores</option><option>Atlantic/Bermuda</option><option>Atlantic/Canary</option><option>Atlantic/Cape_Verde</option><option>Atlantic/Faeroe</option><option>Atlantic/Faroe</option><option>Atlantic/Jan_Mayen</option><option>Atlantic/Madeira</option><option>Atlantic/Reykjavik</option><option>Atlantic/South_Georgia</option><option>Atlantic/St_Helena</option><option>Atlantic/Stanley</option><option>Australia/ACT</option><option>Australia/Adelaide</option><option>Australia/Brisbane</option><option>Australia/Broken_Hill</option><option>Australia/Canberra</option><option>Australia/Currie</option><option>Australia/Darwin</option><option>Australia/Eucla</option><option>Australia/Hobart</option><option>Australia/LHI</option><option>Australia/Lindeman</option><option>Australia/Lord_Howe</option><option>Australia/Melbourne</option><option>Australia/NSW</option><option>Australia/North</option><option>Australia/Perth</option><option>Australia/Queensland</option><option>Australia/South</option><option>Australia/Sydney</option><option>Australia/Tasmania</option><option>Australia/Victoria</option><option>Australia/West</option><option>Australia/Yancowinna</option><option>Brazil/Acre</option><option>Brazil/DeNoronha</option><option>Brazil/East</option><option>Brazil/West</option><option>CET</option><option>CST6CDT</option><option>Canada/Atlantic</option><option>Canada/Central</option><option>Canada/Eastern</option><option>Canada/Mountain</option><option>Canada/Newfoundland</option><option>Canada/Pacific</option><option>Canada/Saskatchewan</option><option>Canada/Yukon</option><option>Chile/Continental</option><option>Chile/EasterIsland</option><option>Cuba</option><option>EET</option><option>EST</option><option>EST5EDT</option><option>Egypt</option><option>Eire</option><option>Etc/GMT</option><option>Etc/GMT+0</option><option>Etc/GMT+1</option><option>Etc/GMT+10</option><option>Etc/GMT+11</option><option>Etc/GMT+12</option><option>Etc/GMT+2</option><option>Etc/GMT+3</option><option>Etc/GMT+4</option><option>Etc/GMT+5</option><option>Etc/GMT+6</option><option>Etc/GMT+7</option><option>Etc/GMT+8</option><option>Etc/GMT+9</option><option>Etc/GMT-0</option><option>Etc/GMT-1</option><option>Etc/GMT-10</option><option>Etc/GMT-11</option><option>Etc/GMT-12</option><option>Etc/GMT-13</option><option>Etc/GMT-14</option><option>Etc/GMT-2</option><option>Etc/GMT-3</option><option>Etc/GMT-4</option><option>Etc/GMT-5</option><option>Etc/GMT-6</option><option>Etc/GMT-7</option><option>Etc/GMT-8</option><option>Etc/GMT-9</option><option>Etc/GMT0</option><option>Etc/Greenwich</option><option>Etc/UCT</option><option>Etc/UTC</option><option>Etc/Universal</option><option>Etc/Zulu</option><option>Europe/Amsterdam</option><option>Europe/Andorra</option><option>Europe/Astrakhan</option><option>Europe/Athens</option><option>Europe/Belfast</option><option>Europe/Belgrade</option><option>Europe/Berlin</option><option>Europe/Bratislava</option><option>Europe/Brussels</option><option>Europe/Bucharest</option><option>Europe/Budapest</option><option>Europe/Busingen</option><option>Europe/Chisinau</option><option>Europe/Copenhagen</option><option>Europe/Dublin</option><option>Europe/Gibraltar</option><option>Europe/Guernsey</option><option>Europe/Helsinki</option><option>Europe/Isle_of_Man</option><option>Europe/Istanbul</option><option>Europe/Jersey</option><option>Europe/Kaliningrad</option><option>Europe/Kiev</option><option>Europe/Kirov</option><option>Europe/Lisbon</option><option>Europe/Ljubljana</option><option>Europe/London</option><option>Europe/Luxembourg</option><option>Europe/Madrid</option><option>Europe/Malta</option><option>Europe/Mariehamn</option><option>Europe/Minsk</option><option>Europe/Monaco</option><option>Europe/Moscow</option><option>Europe/Nicosia</option><option>Europe/Oslo</option><option>Europe/Paris</option><option>Europe/Podgorica</option><option>Europe/Prague</option><option>Europe/Riga</option><option>Europe/Rome</option><option>Europe/Samara</option><option>Europe/San_Marino</option><option>Europe/Sarajevo</option><option>Europe/Saratov</option><option>Europe/Simferopol</option><option>Europe/Skopje</option><option>Europe/Sofia</option><option>Europe/Stockholm</option><option>Europe/Tallinn</option><option>Europe/Tirane</option><option>Europe/Tiraspol</option><option>Europe/Ulyanovsk</option><option>Europe/Uzhgorod</option><option>Europe/Vaduz</option><option>Europe/Vatican</option><option>Europe/Vienna</option><option>Europe/Vilnius</option><option>Europe/Volgograd</option><option>Europe/Warsaw</option><option>Europe/Zagreb</option><option>Europe/Zaporozhye</option><option>Europe/Zurich</option><option>GB</option><option>GB-Eire</option><option>GMT</option><option>GMT+0</option><option>GMT-0</option><option>GMT0</option><option>Greenwich</option><option>HST</option><option>Hongkong</option><option>Iceland</option><option>Indian/Antananarivo</option><option>Indian/Chagos</option><option>Indian/Christmas</option><option>Indian/Cocos</option><option>Indian/Comoro</option><option>Indian/Kerguelen</option><option>Indian/Mahe</option><option>Indian/Maldives</option><option>Indian/Mauritius</option><option>Indian/Mayotte</option><option>Indian/Reunion</option><option>Iran</option><option>Israel</option><option>Jamaica</option><option>Japan</option><option>Kwajalein</option><option>Libya</option><option>MET</option><option>MST</option><option>MST7MDT</option><option>Mexico/BajaNorte</option><option>Mexico/BajaSur</option><option>Mexico/General</option><option>NZ</option><option>NZ-CHAT</option><option>Navajo</option><option>PRC</option><option>PST8PDT</option><option>Pacific/Apia</option><option>Pacific/Auckland</option><option>Pacific/Bougainville</option><option>Pacific/Chatham</option><option>Pacific/Chuuk</option><option>Pacific/Easter</option><option>Pacific/Efate</option><option>Pacific/Enderbury</option><option>Pacific/Fakaofo</option><option>Pacific/Fiji</option><option>Pacific/Funafuti</option><option>Pacific/Galapagos</option><option>Pacific/Gambier</option><option>Pacific/Guadalcanal</option><option>Pacific/Guam</option><option>Pacific/Honolulu</option><option>Pacific/Johnston</option><option>Pacific/Kiritimati</option><option>Pacific/Kosrae</option><option>Pacific/Kwajalein</option><option>Pacific/Majuro</option><option>Pacific/Marquesas</option><option>Pacific/Midway</option><option>Pacific/Nauru</option><option>Pacific/Niue</option><option>Pacific/Norfolk</option><option>Pacific/Noumea</option><option>Pacific/Pago_Pago</option><option>Pacific/Palau</option><option>Pacific/Pitcairn</option><option>Pacific/Pohnpei</option><option>Pacific/Ponape</option><option>Pacific/Port_Moresby</option><option>Pacific/Rarotonga</option><option>Pacific/Saipan</option><option>Pacific/Samoa</option><option>Pacific/Tahiti</option><option>Pacific/Tarawa</option><option>Pacific/Tongatapu</option><option>Pacific/Truk</option><option>Pacific/Wake</option><option>Pacific/Wallis</option><option>Pacific/Yap</option><option>Poland</option><option>Portugal</option><option>ROC</option><option>ROK</option><option>Singapore</option><option>Turkey</option><option>UCT</option><option>US/Alaska</option><option>US/Aleutian</option><option>US/Arizona</option><option>US/Central</option><option>US/East-Indiana</option><option>US/Eastern</option><option>US/Hawaii</option><option>US/Indiana-Starke</option><option>US/Michigan</option><option>US/Mountain</option><option>US/Pacific</option><option>US/Pacific-New</option><option>US/Samoa</option><option>UTC</option><option>Universal</option><option>W-SU</option><option>WET</option><option>Zulu</option></select>
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="freeze-local">Local Time:</label>
+						<input class="form-control" id="freeze-local" type="text" placeholder="Freeze Date (Local Time)" readonly="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="freeze-zonetime">Timezone Time:</label>
+						<input class="form-control" id="freeze-zonetime" type="text" placeholder="Freeze Date (Timezone Time)" readonly="">
+					</div>
+
+					<div class="form-group col-md-12">
+						<label for="freeze">UTC Timestamp:</label>
+						<input class="form-control" id="freeze" name="freeze" type="number" placeholder="Freeze Date (UTC timestamp)" readonly="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">Update</button>
+	</form>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="legal">
+
+	
+	<form method="POST" autocomplete="off" class="w-100">
+		<ul class="nav nav-tabs mb-3">
+			<li class="nav-item">
+				<a class="nav-link active" href="https://saintconhospital.ctfd.io/admin/config#tos-config" role="tab" data-toggle="tab">
+					Terms of Service
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#privacy-policy-config" role="tab" data-toggle="tab">
+					Privacy Policy
+				</a>
+			</li>
+		</ul>
+
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="tos-config">
+				<div class="form-group">
+					<label for="tos_url">Terms of Service URL</label>
+					<input class="form-control" id="tos_url" name="tos_url" type="url" value="">
+					<small class="form-text text-muted">
+						External URL to a Terms of Service document hosted elsewhere
+					</small>
+				</div>
+				<div class="form-group">
+					<label for="tos_text">Terms of Service</label>
+					<small class="form-text text-muted">
+						Text shown on the Terms of Service page
+					</small>
+					<textarea class="form-control markdown" id="tos_text" name="tos_text" rows="15" style="display: none;">* SAINTCON Terms of Service: https://saintcon.org/terms/
+* SAINTCON Code of Conduct: https://saintcon.org/coc/</textarea><div class="EasyMDEContainer"><div class="editor-toolbar"><button class="bold" type="button" title="Bold (Cmd-B)" tabindex="-1"><i class="fa fa-bold"></i></button><button class="italic" type="button" title="Italic (Cmd-I)" tabindex="-1"><i class="fa fa-italic"></i></button><button class="heading" type="button" title="Heading (Cmd-H)" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><i class="separator">|</i><button class="quote" type="button" title="Quote (Cmd-&#39;)" tabindex="-1"><i class="fa fa-quote-left"></i></button><button class="unordered-list" type="button" title="Generic List (Cmd-L)" tabindex="-1"><i class="fa fa-list-ul"></i></button><button class="ordered-list" type="button" title="Numbered List (Cmd-⌥-L)" tabindex="-1"><i class="fa fa-list-ol"></i></button><i class="separator">|</i><button class="link" type="button" title="Create Link (Cmd-K)" tabindex="-1"><i class="fa fa-link"></i></button><button class="image" type="button" title="Insert Image (Cmd-⌥-I)" tabindex="-1"><i class="fa fa-image"></i></button><button class="media" type="button" title="Media Library" tabindex="-1"><i class="fas fa-file-upload"></i></button><i class="separator">|</i><button class="preview no-disable" type="button" title="Toggle Preview (Cmd-P)" tabindex="-1"><i class="fa fa-eye"></i></button><button class="guide no-disable" type="button" title="Markdown Guide" tabindex="-1"><i class="fa fa-question-circle"></i></button></div><div class="CodeMirror cm-s-easymde CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 73px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="min-height: 200px;"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div><div class="editor-preview-side editor-preview"></div><div class="editor-statusbar"><span class="autosave"></span><span class="lines">2</span><span class="words">16</span><span class="cursor">0:0</span></div></div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="privacy-policy-config">
+				<div class="form-group">
+					<label for="privacy_url">Privacy Policy URL</label>
+					<input class="form-control" id="privacy_url" name="privacy_url" type="url" value="">
+					<small class="form-text text-muted">
+						External URL to a Privacy Policy document hosted elsewhere
+					</small>
+				</div>
+				<div class="form-group">
+					<label for="privacy_text">Privacy Policy</label>
+					<small class="form-text text-muted">
+						Text shown on the Privacy Policy page
+					</small>
+					<textarea class="form-control markdown" id="privacy_text" name="privacy_text" rows="15" style="display: none;">* SAINTCON Terms of Service: https://saintcon.org/terms/
+* SAINTCON Code of Conduct: https://saintcon.org/coc/</textarea><div class="EasyMDEContainer"><div class="editor-toolbar"><button class="bold" type="button" title="Bold (Cmd-B)" tabindex="-1"><i class="fa fa-bold"></i></button><button class="italic" type="button" title="Italic (Cmd-I)" tabindex="-1"><i class="fa fa-italic"></i></button><button class="heading" type="button" title="Heading (Cmd-H)" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><i class="separator">|</i><button class="quote" type="button" title="Quote (Cmd-&#39;)" tabindex="-1"><i class="fa fa-quote-left"></i></button><button class="unordered-list" type="button" title="Generic List (Cmd-L)" tabindex="-1"><i class="fa fa-list-ul"></i></button><button class="ordered-list" type="button" title="Numbered List (Cmd-⌥-L)" tabindex="-1"><i class="fa fa-list-ol"></i></button><i class="separator">|</i><button class="link" type="button" title="Create Link (Cmd-K)" tabindex="-1"><i class="fa fa-link"></i></button><button class="image" type="button" title="Insert Image (Cmd-⌥-I)" tabindex="-1"><i class="fa fa-image"></i></button><button class="media" type="button" title="Media Library" tabindex="-1"><i class="fas fa-file-upload"></i></button><i class="separator">|</i><button class="preview no-disable" type="button" title="Toggle Preview (Cmd-P)" tabindex="-1"><i class="fa fa-eye"></i></button><button class="guide no-disable" type="button" title="Markdown Guide" tabindex="-1"><i class="fa fa-question-circle"></i></button></div><div class="CodeMirror cm-s-easymde CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 73px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="min-height: 200px;"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div><div class="editor-preview-side editor-preview"></div><div class="editor-statusbar"><span class="autosave"></span><span class="lines">2</span><span class="words">16</span><span class="cursor">0:0</span></div></div>
+				</div>
+			</div>
+		</div>
+
+		<input class="btn btn-md btn-primary float-right" id="_submit" name="_submit" type="submit" value="Update">
+	</form>
+	
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="backup">
+	<ul class="nav nav-tabs mb-3" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" href="https://saintconhospital.ctfd.io/admin/config#export-ctf" aria-controls="export-ctf" role="tab" data-toggle="tab">Export</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config#import-ctf" aria-controls="import-ctf" role="tab" data-toggle="tab">Import</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link " href="https://saintconhospital.ctfd.io/admin/config#save-csv" aria-controls="save-csv" role="tab" data-toggle="tab">Download CSV</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link " href="https://saintconhospital.ctfd.io/admin/config#import-csv" aria-controls="import-csv" role="tab" data-toggle="tab">Import CSV</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane active" id="export-ctf">
+			<div class="form-group">
+				<p>Exports are an archive of your CTF in its current state. They can be re-imported into other CTFd
+					instances or used by scripts and third parties to calculate statistics.</p>
+				<p>To download an export click the button below.</p>
+			</div>
+			<div class="form-group">
+				<a href="https://saintconhospital.ctfd.io/admin/export" id="export-button" class="btn btn-warning">Export</a>
+			</div>
+		</div>
+		<div role="tabpanel" class="tab-pane" id="import-ctf">
+			<div class="form-group">
+				<p>You can import saved CTFd exports by uploading them below. This will completely wipe your existing
+					CTFd instance and all your data will be replaced by the imported data.
+					You should only import data that you trust!</p>
+
+				<div class="alert alert-warning" role="alert">
+					<small class="text-muted text-right">
+						<i class="fas fa-exclamation pr-2"></i>
+						Importing a CTFd export will completely wipe your existing data
+					</small>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="container-files">Import File</label>
+				<input class="form-control-file" type="file" name="backup" id="import-file" accept=".zip">
+			</div>
+			<input id="import-button" type="submit" class="btn btn-warning" value="Import">
+		</div>
+		<div role="tabpanel" class="tab-pane" id="save-csv">
+			<div class="alert alert-warning" role="alert">
+				<small class="text-muted text-right">
+					<i class="fas fa-exclamation pr-2"></i>
+					CSVs exported from CTFd are not guaranteed to import back in via the Import CSV functionality. See <a href="https://docs.ctfd.io/docs/imports/csv/" target="_blank">CSV Importing instructions</a> for details.
+				</small>
+			</div>
+			
+			<form method="GET" action="https://saintconhospital.ctfd.io/admin/export/csv">
+				<div class="form-group">
+					<label for="table">Database Table</label>
+					<select class="form-control custom-select" id="table" name="table"><option value="scoreboard">scoreboard</option><option value="users+fields">users+fields</option><option value="teams+fields">teams+fields</option><option value="teams+members+fields">teams+members+fields</option><option value="notifications">notifications</option><option value="pages">pages</option><option value="challenges">challenges</option><option value="hints">hints</option><option value="awards">awards</option><option value="tags">tags</option><option value="topics">topics</option><option value="challenge_topics">challenge_topics</option><option value="files">files</option><option value="flags">flags</option><option value="users">users</option><option value="teams">teams</option><option value="submissions">submissions</option><option value="solves">solves</option><option value="unlocks">unlocks</option><option value="tracking">tracking</option><option value="config">config</option><option value="tokens">tokens</option><option value="comments">comments</option><option value="fields">fields</option><option value="field_entries">field_entries</option></select>
+				</div>
+				<input type="submit" class="btn btn-warning" value="Download CSV">
+			</form>
+			
+		</div>
+		<div role="tabpanel" class="tab-pane" id="import-csv">
+			
+			<form method="POST" action="https://saintconhospital.ctfd.io/admin/import/csv" enctype="multipart/form-data" id="import-csv-form">
+				<div class="form-group">
+					<div class="alert alert-info" role="alert">
+						<small class="text-muted text-right">
+							<a href="https://docs.ctfd.io/docs/imports/csv/" target="_blank">
+								<i class="far fa-question-circle pr-2"></i> Instructions and CSV templates
+							</a>
+						</small>
+					</div>
+				</div>
+				<div class="form-group">
+					<b><label for="csv_type">CSV Type</label></b>
+					<select class="form-control custom-select" id="import-csv-type" name="csv_type"><option value="users">Users</option><option value="teams">Teams</option><option value="challenges">Challenges</option></select>
+					<small class="form-text text-muted">
+						Type of CSV data
+					</small>
+				</div>
+				<div class="form-group">
+					<b><label for="csv_file">CSV File</label></b>
+					<input accept=".csv" class="form-control-file" id="import-csv-file" name="csv_file" type="file">
+					<small class="form-text text-muted">
+						CSV file contents
+					</small>
+				</div>
+				<input id="nonce" name="nonce" type="hidden" value="ecafdc2ee19af3d99121d34ebe8dc541d1a925592c8864be21bd31ee5e3fa019">
+				<input type="submit" class="btn btn-warning" value="Import CSV">
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+				<div role="tabpanel" class="tab-pane config-section" id="usermode">
+	<form id="user-mode-form" method="POST" autocomplete="off" class="w-100 custom-config-form">
+		<div class="form-group">
+			<label for="ctf_name">
+				User Mode
+				<small class="form-text text-muted">Controls whether users join together in teams to play (Team Mode) or play as themselves (User Mode)</small>
+			</label>
+
+			<div class="row pt-3">
+				<div class="col-md-6">
+					<label class="h-100 w-100">
+						<input type="radio" class="card-radio d-none" name="user_mode" value="teams" checked="">
+						<div class="card rounded-0 h-100">
+							<div class="card-body p-3">
+								<span class="card-title">
+									<div class="form-check">
+										<input class="form-check-input card-radio-clone" type="radio" style="visibility: hidden;" checked="">
+										<span class="form-check-label text-center">
+											<h5>Team Mode</h5>
+										</span>
+										<ul class="p-0 small">
+											<li>Participants register accounts and form teams</li>
+											<li>If a team member solves a challenge, the entire team receives credit</li>
+											<br>
+											<li>Easier to see which team member solved a challenge</li>
+											<li>May be slightly more difficult to administer</li>
+										</ul>
+									</div>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+				<div class="col-md-6">
+					<label class="h-100 w-100">
+						<input type="radio" class="card-radio d-none" name="user_mode" value="users">
+						<div class="card rounded-0 h-100">
+							<div class="card-body p-3">
+								<span class="card-title">
+									<div class="form-check">
+										<input class="form-check-input card-radio-clone" type="radio" style="visibility: hidden;" checked="">
+										<span class="form-check-label text-center">
+											<h5>User Mode</h5>
+										</span>
+										<ul class="p-0 small">
+											<li>Participants only register an individual account</li>
+											<li>Players can share accounts to form pseudo-teams</li>
+											<br>
+											<li>Easier to organize</li>
+											<li>Difficult to attribute solutions to individual team members</li>
+										</ul>
+									</div>
+								</span>
+							</div>
+						</div>
+					</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="alert alert-danger text-center" role="alert">
+			<p>
+				<strong>Changing your user mode will also delete all submissions or records that a user took an action.</strong>
+				<br><small>(Submissions, Awards, Unlocks, Tracking)</small>
+			</p>
+		</div>
+
+		<button type="submit" class="btn btn-md btn-primary float-right">
+			Update
+		</button>
+	</form>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	</main>
+
+	<footer class="footer pt-2">
+		<div class="container text-center">
+			<a href="https://ctfd.io/" class="text-secondary">
+				<small class="text-muted">
+					Powered by CTFd
+				</small>
+			</a>
+			<span>
+				<small class="text-muted"><br> Version 3.5.0</small>
+			</span>
+		</div>
+	</footer>
+
+	<script defer="" src="./Config-Settings_files/vendor.bundle.min.js"></script>
+	<script defer="" src="./Config-Settings_files/core.min.js"></script>
+	<script defer="" src="./Config-Settings_files/helpers.min.js"></script>
+	<script defer="" src="./Config-Settings_files/components.min.js"></script>
+
+	
+	<script defer="" src="./Config-Settings_files/configs.min.js"></script>
+
+
+	
+
+
+	
+		
+			<script defer="" src="./Config-Settings_files/helpscout.min.js"></script>
+		
+	
+
+
+<div id="beacon-container"><div class="hsds-beacon"><div class="Beacon"><div class="BeaconFabButtonFrame" style="border-radius: 60px; height: 60px; position: fixed; transform: scale(1); width: 60px; z-index: 2149; --pulse-background:#333a40; --pulse-bottom-offset:-95px; --pulse-right-offset:-95px;"><style>.BeaconFabButtonFrame {
+  border: none;
+  bottom: 40px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40px;
+  top: auto;
+  transition: box-shadow 250ms ease, opacity 0.4s ease, scale 1000ms ease-in-out,
+    transform 0.2s ease-in-out
+}
+
+.BeaconFabButtonFrame:active {
+    box-shadow: none;
+  }
+
+.BeaconFabButtonFrame iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color-scheme: normal !important;
+  }
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame {
+    bottom: 10px;
+    right: 20px
+}
+  }
+
+@supports (--css: variables) {
+  .BeaconFabButtonFrame.has-pulse-animation::before {
+    -webkit-animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+            animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    background-color: var(--pulse-background);
+    border-radius: 250px;
+    bottom: var(--pulse-bottom-offset);
+    content: '';
+    height: 250px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    right: var(--pulse-right-offset);
+    width: 250px;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  @-webkit-keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}
+
+.BeaconFabButtonFrame--left {
+  left: 40px;
+  right: initial
+}
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame--left {
+    left: 20px;
+    right: initial
+}
+  }
+</style><iframe id="" data-cy="FrameComponent" aria-label="Toggle Customer Support" src="./Config-Settings_files/saved_resource.html"></iframe></div></div></div></div></body></html>

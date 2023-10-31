@@ -1,0 +1,4705 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://saintconhospital.ctfd.io/admin/scoreboard -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Admin Panel</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="https://cdn.cloud.ctfd.io/saintconhospital/themes/core/static/img/favicon.ico?t=1586721198" type="image/x-icon">
+	<link rel="icon" href="https://cdn.cloud.ctfd.io/saintconhospital/themes/core/static/img/favicon.ico?t=1586721198" type="image/x-icon">
+	<link rel="stylesheet" href="./Teams Scoreboard_files/fonts.min.css">
+	<link rel="stylesheet" href="./Teams Scoreboard_files/main.min.css">
+	<link rel="stylesheet" href="./Teams Scoreboard_files/admin.min.css">
+	<link rel="stylesheet" href="./Teams Scoreboard_files/codemirror.min.css">
+	<script type="text/javascript" src="./Teams Scoreboard_files/vendor.06c7227b.js"></script><script type="text/javascript" src="./Teams Scoreboard_files/main.851b6206.js"></script><script type="text/javascript" async="" src="./Teams Scoreboard_files/saved_resource"></script><script type="text/javascript">
+		var init = {
+			'urlRoot': "",
+			'csrfNonce': "ecafdc2ee19af3d99121d34ebe8dc541d1a925592c8864be21bd31ee5e3fa019",
+			'userMode': "teams",
+			'userId': 1,
+			'userName': "detcidda2",
+			'userEmail': "detcidda2@protonmail.com",
+			'teamId': null, 
+			'teamName': null,
+			'start': null,
+			'end': 1666911600
+		}
+	</script>
+	 
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a href="https://saintconhospital.ctfd.io/" class="navbar-brand">CTFd</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#base-navbars" aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="base-navbars">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/statistics">Statistics</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/notifications">Notifications</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="https://saintconhospital.ctfd.io/admin/scoreboard#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Pages</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/pages">All Pages</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/pages/new">New Page</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/users">Users</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/teams">Teams</a></li>
+					
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/scoreboard">Scoreboard</a></li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/challenges">Challenges</a></li>
+					<li class="nav-item dropdown">
+						<a href="https://saintconhospital.ctfd.io/admin/scoreboard#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Submissions</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions">All Submissions</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/correct">Correct Submissions</a>
+							<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/incorrect">Incorrect Submissions</a>
+						</div>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/config">Config</a></li>
+
+					
+					
+					
+						<li class="nav-item">
+							<a class="nav-link d-none d-md-block d-lg-block">|</a>
+						</li>
+
+						
+							
+								
+							
+							<li class="nav-item"><a class="nav-link" href="https://saintconhospital.ctfd.io/admin/services">Services</a></li>
+						
+
+						
+						<li class="nav-item dropdown">
+							<a href="https://saintconhospital.ctfd.io/admin/scoreboard#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plugins <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/plugins/webhooks">Webhooks</a>
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/plugins/sso">Single sign-on</a>
+									
+											<a class="dropdown-item" href="https://saintconhospital.ctfd.io/admin/submissions/pending">Manual Submissions</a>
+									
+							</ul>
+						</li>
+						
+					
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nav-item">
+						<a class="nav-link" href="https://docs.ctfd.io/" target="_blank">
+							<i class="far fa-question-circle"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main role="main">
+		
+		
+<div class="jumbotron">
+	<div class="container">
+		<h1>Scoreboard</h1>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="float-right pb-3">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-outline-secondary" id="scoreboard-edit-button" data-toggle="tooltip" title="" data-original-title="Hide/Unhide Accounts">
+						<i class="btn-fa fas fa-eye"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="row pb-4">
+		<div class="col-md-12">
+			<ul class="nav nav-tabs nav-fill" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="https://saintconhospital.ctfd.io/admin/scoreboard#standings" role="tab" aria-selected="true">
+						Teams
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="https://saintconhospital.ctfd.io/admin/scoreboard#user-standings" role="tab" aria-selected="false">
+						Users
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="tab-content">
+				<div class="tab-pane fade active show" id="standings" role="tabpanel">
+					<table id="scoreboard" class="table table-striped border">
+	<thead>
+		<tr>
+			<th class="border-right" data-checkbox="">
+				<div class="form-check text-center">
+					<input type="checkbox" class="form-check-input" id="scoreboard-bulk-select" autocomplete="off" data-checkbox-all="">&nbsp;
+				</div>
+			</th>
+			<th class="sort-col text-center"><b>Place</b> <i class="fas fa-sort"></i></th>
+			<th class="sort-col"><b>Team</b> <i class="fas fa-sort"></i></th>
+			<th class="sort-col"><b>Score</b> <i class="fas fa-sort"></i></th>
+			<th class="sort-col"><b>Visibility</b> <i class="fas fa-sort"></i></th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<tr data-href="/admin/teams/10">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="10" data-account-id="10" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">1</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/10">
+					F3n1X
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/63">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="63" data-account-id="63" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">2</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/63">
+					Hitrust!
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/66">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="66" data-account-id="66" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">3</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/66">
+					kashkoj
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/26">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="26" data-account-id="26" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">4</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/26">
+					TechNinja
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/7">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="7" data-account-id="7" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">5</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/7">
+					K-Dub
+					
+				</a>
+			</td>
+			<td>1335</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/40">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="40" data-account-id="40" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">6</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/40">
+					Smthcrmnl
+					
+				</a>
+			</td>
+			<td>1310</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/86">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="86" data-account-id="86" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">7</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/86">
+					Lores
+					
+				</a>
+			</td>
+			<td>1290</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/12">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="12" data-account-id="12" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">8</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/12">
+					Bellaria
+					
+				</a>
+			</td>
+			<td>1070</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/55">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="55" data-account-id="55" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">9</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/55">
+					AJ7o2
+					
+				</a>
+			</td>
+			<td>1000</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/13">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="13" data-account-id="13" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">10</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/13">
+					medicalCenter7
+					
+				</a>
+			</td>
+			<td>870</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/42">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="42" data-account-id="42" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">11</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/42">
+					5h1n1ch1
+					
+				</a>
+			</td>
+			<td>850</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/8">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="8" data-account-id="8" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">12</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/8">
+					Derek Ponies
+					
+				</a>
+			</td>
+			<td>610</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/47">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="47" data-account-id="47" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">13</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/47">
+					Cyberderps
+					
+				</a>
+			</td>
+			<td>580</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/58">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="58" data-account-id="58" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">14</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/58">
+					BYU Cyberia
+					
+				</a>
+			</td>
+			<td>555</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/28">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="28" data-account-id="28" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">15</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/28">
+					Team Schellman
+					
+				</a>
+			</td>
+			<td>550</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/25">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="25" data-account-id="25" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">16</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/25">
+					Logan
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/60">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="60" data-account-id="60" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">17</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/60">
+					tottec
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/17">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="17" data-account-id="17" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">18</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/17">
+					taco_singularity
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/54">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="54" data-account-id="54" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">19</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/54">
+					Computer Boomers
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/108">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="108" data-account-id="108" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">20</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/108">
+					HackThePlanet
+					
+				</a>
+			</td>
+			<td>510</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/39">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="39" data-account-id="39" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">21</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/39">
+					Daniel
+					
+				</a>
+			</td>
+			<td>475</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/96">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="96" data-account-id="96" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">22</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/96">
+					4MeToKnow
+					
+				</a>
+			</td>
+			<td>435</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/53">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="53" data-account-id="53" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">23</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/53">
+					rob
+					
+				</a>
+			</td>
+			<td>425</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/30">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="30" data-account-id="30" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">24</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/30">
+					Berlin
+					
+				</a>
+			</td>
+			<td>425</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/80">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="80" data-account-id="80" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">25</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/80">
+					UIT
+					
+				</a>
+			</td>
+			<td>380</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/33">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="33" data-account-id="33" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">26</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/33">
+					Wolfpack
+					
+				</a>
+			</td>
+			<td>355</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/49">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="49" data-account-id="49" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">27</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/49">
+					An Unexpected Commute
+					
+				</a>
+			</td>
+			<td>325</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/34">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="34" data-account-id="34" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">28</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/34">
+					Crooks
+					
+				</a>
+			</td>
+			<td>320</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/76">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="76" data-account-id="76" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">29</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/76">
+					Intermountain Cyber
+					
+				</a>
+			</td>
+			<td>315</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/90">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="90" data-account-id="90" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">30</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/90">
+					Stapleyites
+					
+				</a>
+			</td>
+			<td>260</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/61">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="61" data-account-id="61" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">31</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/61">
+					Chrisco
+					
+				</a>
+			</td>
+			<td>240</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/112">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="112" data-account-id="112" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">32</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/112">
+					Group (1)
+					
+				</a>
+			</td>
+			<td>215</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/35">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="35" data-account-id="35" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">33</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/35">
+					RiskyFisky
+					
+				</a>
+			</td>
+			<td>205</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/115">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="115" data-account-id="115" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">34</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/115">
+					ISO-GRC
+					
+				</a>
+			</td>
+			<td>205</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/15">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="15" data-account-id="15" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">35</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/15">
+					TheChads
+					
+				</a>
+			</td>
+			<td>185</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/103">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="103" data-account-id="103" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">36</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/103">
+					ToO
+					
+				</a>
+			</td>
+			<td>185</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/116">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="116" data-account-id="116" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">37</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/116">
+					BYUWEB
+					
+				</a>
+			</td>
+			<td>180</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/31">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="31" data-account-id="31" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">38</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/31">
+					Hook
+					
+				</a>
+			</td>
+			<td>175</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/21">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="21" data-account-id="21" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">39</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/21">
+					Minnie Mouse
+					
+				</a>
+			</td>
+			<td>145</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/92">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="92" data-account-id="92" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">40</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/92">
+					SoloEdgeRunner
+					
+				</a>
+			</td>
+			<td>130</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/74">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="74" data-account-id="74" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">41</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/74">
+					Phantomslap
+					
+				</a>
+			</td>
+			<td>95</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/65">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="65" data-account-id="65" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">42</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/65">
+					Bleeding ❤
+					
+				</a>
+			</td>
+			<td>90</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/52">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="52" data-account-id="52" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">43</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/52">
+					DedEyeKenni
+					
+				</a>
+			</td>
+			<td>75</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/18">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="18" data-account-id="18" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">44</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/18">
+					Orange Taffy
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/19">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="19" data-account-id="19" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">45</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/19">
+					MountainTopView
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/24">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="24" data-account-id="24" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">46</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/24">
+					cthulhu
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/29">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="29" data-account-id="29" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">47</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/29">
+					Unicorns
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/16">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="16" data-account-id="16" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">48</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/16">
+					Pathfinders
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/36">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="36" data-account-id="36" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">49</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/36">
+					anzen
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/32">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="32" data-account-id="32" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">50</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/32">
+					Team KhakaSh1
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/44">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="44" data-account-id="44" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">51</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/44">
+					Karbonatom
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/45">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="45" data-account-id="45" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">52</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/45">
+					TeamWithNoName
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/43">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="43" data-account-id="43" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">53</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/43">
+					Acejeat
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/56">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="56" data-account-id="56" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">54</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/56">
+					malandros
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/57">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="57" data-account-id="57" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">55</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/57">
+					Los Lobos
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/59">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="59" data-account-id="59" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">56</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/59">
+					Feraligator
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/67">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="67" data-account-id="67" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">57</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/67">
+					Owt
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/69">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="69" data-account-id="69" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">58</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/69">
+					:)
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/73">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="73" data-account-id="73" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">59</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/73">
+					ßελsτ
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/75">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="75" data-account-id="75" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">60</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/75">
+					Guardians
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/64">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="64" data-account-id="64" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">61</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/64">
+					Alpine
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/81">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="81" data-account-id="81" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">62</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/81">
+					SUU
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/88">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="88" data-account-id="88" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">63</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/88">
+					Lucid
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/78">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="78" data-account-id="78" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">64</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/78">
+					M1st3R X
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/85">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="85" data-account-id="85" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">65</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/85">
+					Team Me
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/91">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="91" data-account-id="91" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">66</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/91">
+					MediHavok
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/82">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="82" data-account-id="82" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">67</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/82">
+					Hello
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/93">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="93" data-account-id="93" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">68</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/93">
+					Awn
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/111">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="111" data-account-id="111" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">69</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/111">
+					Drydenmaker
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/71">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="71" data-account-id="71" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">70</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/71">
+					Aaaaaaaa
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/102">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="102" data-account-id="102" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">71</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/102">
+					Dm
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/113">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="113" data-account-id="113" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">72</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/113">
+					Virus
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/62">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="62" data-account-id="62" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">73</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/62">
+					UT
+					
+				</a>
+			</td>
+			<td>60</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/3">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="3" data-account-id="3" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">74</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/3">
+					DHHS
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/70">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="70" data-account-id="70" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">75</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/70">
+					Clembot
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/77">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="77" data-account-id="77" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">76</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/77">
+					Parzi
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/98">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="98" data-account-id="98" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">77</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/98">
+					Moose Reapers
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/100">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="100" data-account-id="100" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">78</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/100">
+					OtechIT
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/107">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="107" data-account-id="107" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">79</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/107">
+					Manamongkings
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/114">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="114" data-account-id="114" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">80</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/114">
+					DisUn10n
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/106">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="106" data-account-id="106" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">81</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/106">
+					Dudes
+					
+				</a>
+			</td>
+			<td>45</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/48">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="48" data-account-id="48" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">82</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/48">
+					space-cadets
+					
+				</a>
+			</td>
+			<td>40</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/5">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="5" data-account-id="5" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">83</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/5">
+					Bambooligans
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/23">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="23" data-account-id="23" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">84</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/23">
+					MediWolves
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/117">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="117" data-account-id="117" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">85</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/117">
+					TTT
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/9">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="9" data-account-id="9" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">86</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/9">
+					thebelch
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/37">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="37" data-account-id="37" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">87</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/37">
+					Kbell
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/97">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="97" data-account-id="97" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">88</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/97">
+					a
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/38">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="38" data-account-id="38" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">89</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/38">
+					DDM
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/4">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="4" data-account-id="4" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">90</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/4">
+					AfrcanPrince
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/27">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="27" data-account-id="27" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">91</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/27">
+					Trthornton
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/104">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="104" data-account-id="104" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">92</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/104">
+					kingbob
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/95">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="95" data-account-id="95" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">93</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/95">
+					Photoshop People
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/teams/83">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="83" data-account-id="83" autocomplete="off">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">94</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/teams/83">
+					UBTECH
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+	</tbody>
+</table>
+				</div>
+				
+				<div class="tab-pane fade" id="user-standings" role="tabpanel">
+					<table id="scoreboard" class="table table-striped border">
+	<thead>
+		<tr>
+			<th class="border-right" data-checkbox="">
+				<div class="form-check text-center">
+					<input type="checkbox" class="form-check-input" id="users-bulk-select" autocomplete="off" data-checkbox-all="">&nbsp;
+				</div>
+			</th>
+			<th class="sort-col text-center"><b>Place</b> <i class="fas fa-sort"></i></th>
+			<th class="sort-col"><b>User</b> <i class="fas fa-sort"></i></th>
+			<th class="sort-col"><b>Score</b> <i class="fas fa-sort"></i></th>
+			<th class="sort-col"><b>Visibility</b> <i class="fas fa-sort"></i></th>
+		</tr>
+	</thead>
+	<tbody>
+	
+		<tr data-href="/admin/users/17">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="17" autocomplete="off" data-user-id="17">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">1</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/17">
+					F3n1X
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/95">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="95" autocomplete="off" data-user-id="95">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">2</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/95">
+					Kashkoj
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/90">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="90" autocomplete="off" data-user-id="90">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">3</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/90">
+					d4r7h
+					
+				</a>
+			</td>
+			<td>1345</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/14">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="14" autocomplete="off" data-user-id="14">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">4</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/14">
+					K-Dub
+					
+				</a>
+			</td>
+			<td>1335</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/63">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="63" autocomplete="off" data-user-id="63">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">5</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/63">
+					Smthcrmnl
+					
+				</a>
+			</td>
+			<td>1310</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/119">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="119" autocomplete="off" data-user-id="119">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">6</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/119">
+					Sirblah101
+					
+				</a>
+			</td>
+			<td>1290</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/19">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="19" autocomplete="off" data-user-id="19">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">7</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/19">
+					readgirl52
+					
+				</a>
+			</td>
+			<td>1070</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/78">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="78" autocomplete="off" data-user-id="78">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">8</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/78">
+					AJ7o2
+					
+				</a>
+			</td>
+			<td>1000</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/20">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="20" autocomplete="off" data-user-id="20">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">9</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/20">
+					TheH@ckingB!$h0p
+					
+				</a>
+			</td>
+			<td>870</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/67">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="67" autocomplete="off" data-user-id="67">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">10</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/67">
+					5h1n1ch1
+					
+				</a>
+			</td>
+			<td>850</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/44">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="44" autocomplete="off" data-user-id="44">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">11</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/44">
+					v1nd1c4t10n
+					
+				</a>
+			</td>
+			<td>550</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/127">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="127" autocomplete="off" data-user-id="127">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">12</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/127">
+					phermium
+					
+				</a>
+			</td>
+			<td>550</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/27">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="27" autocomplete="off" data-user-id="27">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">13</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/27">
+					JosephS
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/86">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="86" autocomplete="off" data-user-id="86">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">14</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/86">
+					tottec
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/33">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="33" autocomplete="off" data-user-id="33">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">15</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/33">
+					taco_singularity
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/77">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="77" autocomplete="off" data-user-id="77">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">16</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/77">
+					nopesled
+					
+				</a>
+			</td>
+			<td>530</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/82">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="82" autocomplete="off" data-user-id="82">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">17</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/82">
+					Legoclones
+					
+				</a>
+			</td>
+			<td>510</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/156">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="156" autocomplete="off" data-user-id="156">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">18</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/156">
+					HackThePlanet
+					
+				</a>
+			</td>
+			<td>510</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/60">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="60" autocomplete="off" data-user-id="60">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">19</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/60">
+					BlueOrca
+					
+				</a>
+			</td>
+			<td>475</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/126">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="126" autocomplete="off" data-user-id="126">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">20</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/126">
+					codeguru42
+					
+				</a>
+			</td>
+			<td>460</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/136">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="136" autocomplete="off" data-user-id="136">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">21</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/136">
+					4MeToKnow
+					
+				</a>
+			</td>
+			<td>435</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/76">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="76" autocomplete="off" data-user-id="76">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">22</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/76">
+					rob
+					
+				</a>
+			</td>
+			<td>425</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/46">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="46" autocomplete="off" data-user-id="46">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">23</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/46">
+					htrn
+					
+				</a>
+			</td>
+			<td>425</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/147">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="147" autocomplete="off" data-user-id="147">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">24</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/147">
+					blueskog
+					
+				</a>
+			</td>
+			<td>375</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/74">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="74" autocomplete="off" data-user-id="74">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">25</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/74">
+					yagoth
+					
+				</a>
+			</td>
+			<td>325</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/85">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="85" autocomplete="off" data-user-id="85">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">26</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/85">
+					Skimice
+					
+				</a>
+			</td>
+			<td>325</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/55">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="55" autocomplete="off" data-user-id="55">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">27</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/55">
+					poullam
+					
+				</a>
+			</td>
+			<td>320</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/149">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="149" autocomplete="off" data-user-id="149">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">28</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/149">
+					slever
+					
+				</a>
+			</td>
+			<td>315</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/39">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="39" autocomplete="off" data-user-id="39">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">29</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/39">
+					jbmaluk
+					
+				</a>
+			</td>
+			<td>270</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/125">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="125" autocomplete="off" data-user-id="125">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">30</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/125">
+					spyder_221
+					
+				</a>
+			</td>
+			<td>260</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/87">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="87" autocomplete="off" data-user-id="87">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">31</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/87">
+					Chrisco
+					
+				</a>
+			</td>
+			<td>240</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/111">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="111" autocomplete="off" data-user-id="111">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">32</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/111">
+					Cointre
+					
+				</a>
+			</td>
+			<td>225</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/57">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="57" autocomplete="off" data-user-id="57">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">33</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/57">
+					Minifisk
+					
+				</a>
+			</td>
+			<td>205</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/165">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="165" autocomplete="off" data-user-id="165">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">34</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/165">
+					tl
+					
+				</a>
+			</td>
+			<td>205</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/37">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="37" autocomplete="off" data-user-id="37">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">35</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/37">
+					Scarlet
+					
+				</a>
+			</td>
+			<td>185</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/151">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="151" autocomplete="off" data-user-id="151">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">36</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/151">
+					FireSec
+					
+				</a>
+			</td>
+			<td>185</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/145">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="145" autocomplete="off" data-user-id="145">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">37</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/145">
+					nwalton
+					
+				</a>
+			</td>
+			<td>180</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/25">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="25" autocomplete="off" data-user-id="25">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">38</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/25">
+					403syph3r
+					
+				</a>
+			</td>
+			<td>155</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/164">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="164" autocomplete="off" data-user-id="164">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">39</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/164">
+					Aero
+					
+				</a>
+			</td>
+			<td>155</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/34">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="34" autocomplete="off" data-user-id="34">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">40</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/34">
+					Minnie mouse
+					
+				</a>
+			</td>
+			<td>145</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/47">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="47" autocomplete="off" data-user-id="47">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">41</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/47">
+					hookbot
+					
+				</a>
+			</td>
+			<td>145</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/51">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="51" autocomplete="off" data-user-id="51">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">42</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/51">
+					Wyvern
+					
+				</a>
+			</td>
+			<td>145</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/114">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="114" autocomplete="off" data-user-id="114">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">43</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/114">
+					dionmunk
+					
+				</a>
+			</td>
+			<td>140</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/129">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="129" autocomplete="off" data-user-id="129">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">44</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/129">
+					HawkOTM
+					
+				</a>
+			</td>
+			<td>130</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/38">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="38" autocomplete="off" data-user-id="38">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">45</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/38">
+					Gish
+					
+				</a>
+			</td>
+			<td>125</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/72">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="72" autocomplete="off" data-user-id="72">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">46</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/72">
+					Vh3lox
+					
+				</a>
+			</td>
+			<td>115</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/105">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="105" autocomplete="off" data-user-id="105">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">47</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/105">
+					White Wolf
+					
+				</a>
+			</td>
+			<td>95</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/94">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="94" autocomplete="off" data-user-id="94">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">48</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/94">
+					Targe
+					
+				</a>
+			</td>
+			<td>90</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/112">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="112" autocomplete="off" data-user-id="112">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">49</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/112">
+					boffinator
+					
+				</a>
+			</td>
+			<td>80</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/66">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="66" autocomplete="off" data-user-id="66">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">50</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/66">
+					DedEyeKenni
+					
+				</a>
+			</td>
+			<td>75</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/160">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="160" autocomplete="off" data-user-id="160">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">51</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/160">
+					Santos
+					
+				</a>
+			</td>
+			<td>75</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/32">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="32" autocomplete="off" data-user-id="32">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">52</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/32">
+					Oliver
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/42">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="42" autocomplete="off" data-user-id="42">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">53</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/42">
+					cthulhu
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/45">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="45" autocomplete="off" data-user-id="45">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">54</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/45">
+					Jellyfishin
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/48">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="48" autocomplete="off" data-user-id="48">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">55</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/48">
+					Rufnubbins
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/56">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="56" autocomplete="off" data-user-id="56">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">56</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/56">
+					anzenketh
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/49">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="49" autocomplete="off" data-user-id="49">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">57</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/49">
+					Khakash1
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/69">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="69" autocomplete="off" data-user-id="69">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">58</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/69">
+					Karbonatom
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/70">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="70" autocomplete="off" data-user-id="70">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">59</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/70">
+					FriedRice
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/68">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="68" autocomplete="off" data-user-id="68">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">60</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/68">
+					Acejeat
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/79">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="79" autocomplete="off" data-user-id="79">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">61</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/79">
+					galo_doido
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/81">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="81" autocomplete="off" data-user-id="81">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">62</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/81">
+					Chaski
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/84">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="84" autocomplete="off" data-user-id="84">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">63</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/84">
+					Chuck148
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/96">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="96" autocomplete="off" data-user-id="96">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">64</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/96">
+					Davidna
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/99">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="99" autocomplete="off" data-user-id="99">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">65</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/99">
+					wtfomfom
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/104">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="104" autocomplete="off" data-user-id="104">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">66</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/104">
+					southwickda
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/106">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="106" autocomplete="off" data-user-id="106">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">67</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/106">
+					vwcstryker10
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/91">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="91" autocomplete="off" data-user-id="91">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">68</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/91">
+					jjlviper
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/113">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="113" autocomplete="off" data-user-id="113">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">69</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/113">
+					johnlisonbee
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/122">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="122" autocomplete="off" data-user-id="122">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">70</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/122">
+					SwingChef
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/109">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="109" autocomplete="off" data-user-id="109">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">71</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/109">
+					Mister X
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/118">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="118" autocomplete="off" data-user-id="118">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">72</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/118">
+					GrumpyGPA
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/128">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="128" autocomplete="off" data-user-id="128">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">73</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/128">
+					Med1
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/115">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="115" autocomplete="off" data-user-id="115">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">74</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/115">
+					Jjames
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/148">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="148" autocomplete="off" data-user-id="148">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">75</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/148">
+					boyofdestiny
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/163">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="163" autocomplete="off" data-user-id="163">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">76</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/163">
+					Drydenmaker
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/102">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="102" autocomplete="off" data-user-id="102">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">77</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/102">
+					Paul
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/150">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="150" autocomplete="off" data-user-id="150">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">78</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/150">
+					Dm
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/8">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="8" autocomplete="off" data-user-id="8">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">79</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/8">
+					Dr_virus
+					
+				</a>
+			</td>
+			<td>70</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/88">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="88" autocomplete="off" data-user-id="88">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">80</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/88">
+					RedEye
+					
+				</a>
+			</td>
+			<td>60</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/133">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="133" autocomplete="off" data-user-id="133">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">81</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/133">
+					jsouth117
+					
+				</a>
+			</td>
+			<td>60</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/162">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="162" autocomplete="off" data-user-id="162">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">82</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/162">
+					volke
+					
+				</a>
+			</td>
+			<td>60</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/9">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="9" autocomplete="off" data-user-id="9">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">83</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/9">
+					Krisdmage
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/50">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="50" autocomplete="off" data-user-id="50">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">84</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/50">
+					Wavebuster
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/101">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="101" autocomplete="off" data-user-id="101">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">85</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/101">
+					Clembot
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/100">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="100" autocomplete="off" data-user-id="100">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">86</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/100">
+					Parzi
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/144">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="144" autocomplete="off" data-user-id="144">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">87</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/144">
+					OtechIT
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/155">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="155" autocomplete="off" data-user-id="155">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">88</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/155">
+					Manamongkings
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/166">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="166" autocomplete="off" data-user-id="166">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">89</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/166">
+					Cptcog
+					
+				</a>
+			</td>
+			<td>50</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/83">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="83" autocomplete="off" data-user-id="83">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">90</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/83">
+					s
+					
+				</a>
+			</td>
+			<td>45</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/154">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="154" autocomplete="off" data-user-id="154">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">91</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/154">
+					dude
+					
+				</a>
+			</td>
+			<td>45</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/31">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="31" autocomplete="off" data-user-id="31">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">92</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/31">
+					Codes
+					
+				</a>
+			</td>
+			<td>40</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/73">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="73" autocomplete="off" data-user-id="73">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">93</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/73">
+					_t3d
+					
+				</a>
+			</td>
+			<td>40</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/138">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="138" autocomplete="off" data-user-id="138">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">94</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/138">
+					Zer0
+					
+				</a>
+			</td>
+			<td>40</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/15">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="15" autocomplete="off" data-user-id="15">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">95</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/15">
+					Zorgeuf
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/26">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="26" autocomplete="off" data-user-id="26">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">96</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/26">
+					Boomashock
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/12">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="12" autocomplete="off" data-user-id="12">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">97</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/12">
+					Amantes Sunt Amentes
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/29">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="29" autocomplete="off" data-user-id="29">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">98</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/29">
+					CliKb8t
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/41">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="41" autocomplete="off" data-user-id="41">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">99</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/41">
+					Philip
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/54">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="54" autocomplete="off" data-user-id="54">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">100</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/54">
+					BergesenFrise
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/167">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="167" autocomplete="off" data-user-id="167">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">101</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/167">
+					flameofudun
+					
+				</a>
+			</td>
+			<td>30</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/16">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="16" autocomplete="off" data-user-id="16">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">102</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/16">
+					jabelch
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/53">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="53" autocomplete="off" data-user-id="53">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">103</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/53">
+					Mas
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/58">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="58" autocomplete="off" data-user-id="58">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">104</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/58">
+					Kbell
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/137">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="137" autocomplete="off" data-user-id="137">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">105</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/137">
+					samfisher85
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/168">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="168" autocomplete="off" data-user-id="168">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">106</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/168">
+					onimaru
+					
+				</a>
+			</td>
+			<td>20</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/59">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="59" autocomplete="off" data-user-id="59">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">107</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/59">
+					zwiebelspaetzle
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/10">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="10" autocomplete="off" data-user-id="10">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">108</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/10">
+					AfricanPrince
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/43">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="43" autocomplete="off" data-user-id="43">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">109</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/43">
+					phottog
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/124">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="124" autocomplete="off" data-user-id="124">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">110</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/124">
+					T3omner
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/132">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="132" autocomplete="off" data-user-id="132">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">111</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/132">
+					Skaartheknight
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/140">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="140" autocomplete="off" data-user-id="140">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">112</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/140">
+					murf
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/152">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="152" autocomplete="off" data-user-id="152">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">113</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/152">
+					kingbob
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/135">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="135" autocomplete="off" data-user-id="135">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">114</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/135">
+					Velox
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+		<tr data-href="/admin/users/116">
+			<td class="border-right text-center" data-checkbox="">
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" value="116" autocomplete="off" data-user-id="116">&nbsp;
+				</div>
+			</td>
+			<td class="text-center" width="10%">115</td>
+			<td>
+				<a href="https://saintconhospital.ctfd.io/admin/users/116">
+					Lynn Walker
+					
+				</a>
+			</td>
+			<td>10</td>
+			<td>
+				
+					<span class="badge badge-success">visible</span>
+				
+			</td>
+		</tr>
+	
+	</tbody>
+</table>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+	</main>
+
+	<footer class="footer pt-2">
+		<div class="container text-center">
+			<a href="https://ctfd.io/" class="text-secondary">
+				<small class="text-muted">
+					Powered by CTFd
+				</small>
+			</a>
+			<span>
+				<small class="text-muted"><br> Version 3.5.0</small>
+			</span>
+		</div>
+	</footer>
+
+	<script defer="" src="./Teams Scoreboard_files/vendor.bundle.min.js"></script>
+	<script defer="" src="./Teams Scoreboard_files/core.min.js"></script>
+	<script defer="" src="./Teams Scoreboard_files/helpers.min.js"></script>
+	<script defer="" src="./Teams Scoreboard_files/components.min.js"></script>
+
+	
+	<script defer="" src="./Teams Scoreboard_files/scoreboard.min.js"></script>
+
+
+	
+
+
+	
+		
+			<script defer="" src="./Teams Scoreboard_files/helpscout.min.js"></script>
+		
+	
+
+
+<div id="beacon-container"><div class="hsds-beacon"><div class="Beacon"><div class="BeaconFabButtonFrame" style="border-radius: 60px; height: 60px; position: fixed; transform: scale(1); width: 60px; z-index: 2149; --pulse-background:#333a40; --pulse-bottom-offset:-95px; --pulse-right-offset:-95px;"><style>.BeaconFabButtonFrame {
+  border: none;
+  bottom: 40px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 40px;
+  top: auto;
+  transition: box-shadow 250ms ease, opacity 0.4s ease, scale 1000ms ease-in-out,
+    transform 0.2s ease-in-out
+}
+
+.BeaconFabButtonFrame:active {
+    box-shadow: none;
+  }
+
+.BeaconFabButtonFrame iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+    color-scheme: normal !important;
+  }
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame {
+    bottom: 10px;
+    right: 20px
+}
+  }
+
+@supports (--css: variables) {
+  .BeaconFabButtonFrame.has-pulse-animation::before {
+    -webkit-animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+            animation: puff-out-center 2s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    background-color: var(--pulse-background);
+    border-radius: 250px;
+    bottom: var(--pulse-bottom-offset);
+    content: '';
+    height: 250px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    right: var(--pulse-right-offset);
+    width: 250px;
+    will-change: transform;
+    z-index: -1;
+  }
+
+  @-webkit-keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+  @keyframes puff-out-center {
+    0% {
+      transform: scale(0.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}
+
+.BeaconFabButtonFrame--left {
+  left: 40px;
+  right: initial
+}
+
+@media (max-height: 740px) {
+
+.BeaconFabButtonFrame--left {
+    left: 20px;
+    right: initial
+}
+  }
+</style><iframe id="" data-cy="FrameComponent" aria-label="Toggle Customer Support" src="./Teams Scoreboard_files/saved_resource.html"></iframe></div></div></div></div></body></html>
